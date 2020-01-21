@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ProductDetailVariantsBodyRowItem from './ProductDetailVariantsBodyRowItem';
+import ProductDetailVariantsBodyRowDropdown from './ProductDetailVariantsBodyRowDropdown';
 import Button from './Button';
 
 interface Props {
@@ -12,18 +13,18 @@ const ProductDetailVariantsBodyRow: React.FC<Props> = ({ rowData, labels }) => {
   const [showDropdown, toggleDropDown] = React.useState(false);
   return (
     <div
-      className={`variants__body__row ${showDropdown ? `show` : `hide`}`}
+      className={`variants__body__row`}
       onClick={() => toggleDropDown(prevState => !prevState)}>
       {rowData.map((text, i) => (
-        <ProductDetailVariantsBodyRowItem
-          text={text}
-          key={text}
-          // first item doesn't have label
-          rowsKeys={i === 0 ? null : labels[i]}
-        />
+        <ProductDetailVariantsBodyRowItem text={text} key={text} />
       ))}
-      {/* > TODO: extract text into json */}
+      {/* TODO: extract text into json */}
       <Button className={`btn--invisible`}>POPTAT</Button>
+      <ProductDetailVariantsBodyRowDropdown
+        labels={labels}
+        rowData={rowData}
+        showDropdown={showDropdown}
+      />
     </div>
   );
 };
