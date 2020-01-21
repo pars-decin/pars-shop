@@ -1,0 +1,131 @@
+.variants {
+  border-bottom: 1px solid $red;
+  margin-top: -1px;
+  &__body {
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      &:hover {
+        background-color: $light-gray;
+        border-bottom: 1px solid $red;
+        border-top: 1px solid $red;
+        // prevents row from growing by 2px from borders
+        margin: -1px 0;
+      }
+      &__item {
+        width: 100%;
+        padding: 10px 0px 10px 20px;
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        letter-spacing: 0.05em;
+        &__key {
+          display: none;
+        }
+        &:not(:last-child) {
+          border-right: 1px solid $red;
+        }
+      }
+      .btn--invisible {
+        width: 110px;
+        flex-shrink: 0;
+      }
+    }
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    &__item {
+      width: 100%;
+      padding: 10px 0px 10px 20px;
+      border-top: 1px solid $red;
+      border-bottom: 1px solid $red;
+      background-color: $light-gray;
+      color: $red;
+      font-size: 1.4rem;
+      letter-spacing: 0.05em;
+      &:not(:last-child) {
+        border-right: 1px solid $red;
+      }
+      &:last-child {
+        box-sizing: content-box;
+        padding-right: 115px;
+      }
+    }
+  }
+  @include phone {
+    &__head {
+      &__item {
+        padding-left: 30px;
+        display: none;
+        &:nth-child(1) {
+          display: block;
+        }
+      }
+    }
+    &__body {
+      &__row {
+        display: block;
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 13px;
+          height: 8px;
+          top: 18px;
+          left: 30px;
+          background-image: url('/icons/dropdown.svg');
+          background-size: cover;
+          transform: rotate(-90deg);
+        }
+        &.show {
+          &:before {
+            transform: rotate(0deg);
+          }
+          .variants__body__row__item {
+            &:not(:first-child) {
+              background-color: $light-gray;
+            }
+          }
+        }
+        &.hide {
+          .variants__body__row__item {
+            &:not(:first-child) {
+              display: none;
+            }
+          }
+        }
+        &:hover {
+          // reset hover effects
+          background-color: $white;
+          border: 0;
+          margin: 0;
+        }
+        &__item {
+          height: 44px;
+          &:first-child {
+            padding-left: 55px;
+          }
+          &__key {
+            display: block;
+            margin-left: 20px;
+          }
+          &:not(:last-child) {
+            border-right: 0;
+          }
+          &:nth-child(1) {
+            display: flex;
+          }
+        }
+        .btn--invisible {
+          position: absolute;
+          height: 44px;
+          top: 0;
+          right: 0;
+          border-left: 1px solid $red;
+        }
+      }
+    }
+  }
+}

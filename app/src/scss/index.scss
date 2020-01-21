@@ -1,0 +1,17 @@
+@import './variables';
+@import './normalize';
+
+.root {
+  @import './typo';
+
+  @import './components/sidebar';
+  @import './components/sidebarItem';
+  @import './components/sidebarBlock';
+  @import './components/view';
+  @import './components/button';
+  @import './components/productsGrid';
+  @import './components/productsGridItem';
+  @import './components/productDetail';
+  @import './components/productVariants';
+  @import './components/scrollbars';
+}

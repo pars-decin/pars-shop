@@ -1,0 +1,11 @@
+.view {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  // overflow hidden interferes with sticky elements
+  padding-right: 90px;
+  // &.home {}
+  @include small-notebook {
+    padding-right: 0;
+  }
+}

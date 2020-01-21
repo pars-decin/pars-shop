@@ -1,0 +1,39 @@
+$light-gray: #fafafa;
+$red: #f2182a;
+$white: white;
+$black: #171e26;
+
+$navbarHeight: 90px;
+
+@function cols($cols) {
+  @return 100vw / 15 * $cols;
+}
+
+@mixin big-destkop {
+  @media screen and (min-width: 1921px) {
+    @content;
+  }
+}
+@mixin small-notebook {
+  @media screen and (max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin landscape-tablet {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin portrait-tablet {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}

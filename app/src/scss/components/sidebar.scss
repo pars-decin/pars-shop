@@ -1,0 +1,13 @@
+.sidebar {
+  width: cols(4);
+  min-width: 300px;
+  max-width: 400px;
+  // min-height: 100vh;
+  overflow-y: auto;
+  // border-right: 1px solid $red;
+  position: sticky;
+  top: 0;
+  @include portrait-tablet {
+    display: none;
+  }
+}

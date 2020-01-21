@@ -1,0 +1,23 @@
+{
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "dist", "public"],
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "es6",
+    "outDir": "",
+    "lib": ["es2015", "es2017", "dom"],
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "allowJs": true,
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "components/*": ["src/components/*"]
+    }
+  }
+}

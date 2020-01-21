@@ -1,0 +1,38 @@
+html {
+  font-size: 62.5%;
+}
+.root {
+  box-sizing: border-box;
+  width: 100%;
+  * {
+    box-sizing: border-box;
+  }
+  ul {
+    padding: initial;
+    list-style: none;
+    margin-bottom: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  span {
+    margin: 0;
+    padding: 0;
+    line-height: initial;
+    letter-spacing: normal;
+    font-size: initial;
+    text-align: initial;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .products {
+    margin-bottom: 0;
+    justify-content: stretch;
+  }
+}

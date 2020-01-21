@@ -1,0 +1,25 @@
+.btn {
+  border: 1px;
+  border-style: solid;
+  padding: 12px 30px;
+  background-color: transparent;
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  &--primary {
+    border-color: $red;
+    color: $red;
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+  &--invisible {
+    border: 0px solid transparent;
+    color: $red;
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+}
