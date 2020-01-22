@@ -40,14 +40,13 @@
       }
     }
     &__images {
-      // height: cols(3);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       img {
-        width: cols(2.5);
+        width: auto;
         height: cols(3);
-        object-fit: contain;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+          margin-right: 20px;
+        }
       }
     }
   }
@@ -100,8 +99,8 @@
     }
     &__cover {
       width: cols(6);
-      min-height: initial;
-      height: 400px;
+      // min-height: initial;
+      // height: 400px;
     }
   }
   @include phone {
@@ -112,6 +111,15 @@
         padding: 80px 30px;
         height: auto;
         min-height: initial;
+      }
+      &__images {
+        img {
+          width: 100%;
+          height: auto;
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+        }
       }
     }
     &__cover {

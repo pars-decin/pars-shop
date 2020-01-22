@@ -13,7 +13,8 @@ interface Props {
 const ProductDetailVariantsBody: React.FC<Props> = ({ rowsData, labels }) => {
   return (
     <div className={`variants__body`}>
-      <Scrollbar styles={{ height: (window.innerHeight / 15) * 5 }}>
+      <Scrollbar
+        styles={{ height: (window.innerHeight / 15) * 5, minHeight: 400 }}>
         {rowsData.map((rowData, i) => (
           <ProductDetailVariantsBodyRow
             key={i}

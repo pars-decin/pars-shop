@@ -34,8 +34,12 @@ const ProductDetail: React.FC<Props> = ({ uid }) => {
         />
         <h2>Varianty</h2>
         <ProductVariants variantsId={productIds} />
-        <h2>Obrázky</h2>
-        <ProductDetailImages imageNames={imageNames} />
+        {imageNames.length !== 0 && (
+          <>
+            <h2>Obrázky</h2>
+            <ProductDetailImages imageNames={imageNames} />
+          </>
+        )}
       </div>
       <div className={`product-detail__cover`}>
         <Img src={`/img/products/${productImage}`} />

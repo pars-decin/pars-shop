@@ -7,14 +7,22 @@ interface Props {
   labels: Array<string>;
 }
 
+const transition = {
+  stiffness: 100,
+  mass: 0.2,
+};
+
 const variants = {
   show: {
     height: 'auto',
-    transition: { when: 'beforeChildren', staggerChildren: 0.1 },
+    opacity: 1,
+    transition: { ...transition, when: 'beforeChildren', staggerChildren: 0.1 },
   },
   hide: {
     height: 0,
+    opacity: 0,
     transition: {
+      ...transition,
       when: 'afterChildren',
       staggerChildren: 0.1,
       staggerDirection: -1,
