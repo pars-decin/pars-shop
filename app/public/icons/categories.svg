@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
+  <g id="categories" transform="translate(0 0)">
+    <g id="Rectangle_463" data-name="Rectangle 463" transform="translate(0 0)" fill="#f2182a" stroke="#f2182a" stroke-width="1">
+      <rect width="3" height="3" stroke="none"/>
+      <rect x="0.5" y="0.5" width="2" height="2" fill="none"/>
+    </g>
+    <g id="Rectangle_464" data-name="Rectangle 464" transform="translate(0 7)" fill="#f2182a" stroke="#f2182a" stroke-width="1">
+      <rect width="3" height="3" stroke="none"/>
+      <rect x="0.5" y="0.5" width="2" height="2" fill="none"/>
+    </g>
+    <g id="Rectangle_465" data-name="Rectangle 465" transform="translate(0 14)" fill="#f2182a" stroke="#f2182a" stroke-width="1">
+      <rect width="3" height="3" stroke="none"/>
+      <rect x="0.5" y="0.5" width="2" height="2" fill="none"/>
+    </g>
+    <g id="Rectangle_463-2" data-name="Rectangle 463" transform="translate(6 0)" fill="#f2182a" stroke="#f2182a" stroke-width="1">
+      <rect width="16" height="3" stroke="none"/>
+      <rect x="0.5" y="0.5" width="15" height="2" fill="none"/>
+    </g>
+    <g id="Rectangle_464-2" data-name="Rectangle 464" transform="translate(6 7)" fill="#f2182a" stroke="#f2182a" stroke-width="1">
+      <rect width="16" height="3" stroke="none"/>
+      <rect x="0.5" y="0.5" width="15" height="2" fill="none"/>
+    </g>
+    <g id="Rectangle_465-2" data-name="Rectangle 465" transform="translate(6 14)" fill="#f2182a" stroke="#f2182a" stroke-width="1">
+      <rect width="16" height="3" stroke="none"/>
+      <rect x="0.5" y="0.5" width="15" height="2" fill="none"/>
+    </g>
+  </g>
+</svg>

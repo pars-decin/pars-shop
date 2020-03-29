@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="123" height="97" viewBox="0 0 123 97">
+  <g id="materialCutting" transform="translate(0 -0.194)">
+    <g id="Group_176" data-name="Group 176" transform="translate(22.915 4.092)">
+      <path id="Path_389" data-name="Path 389" d="M-63.5,788.3l18.2,18.8h22.217l18.2-18.8" transform="translate(72.58 -788.301)" fill="none" stroke="#f2182a" stroke-miterlimit="10" stroke-width="3"/>
+      <line id="Line_180" data-name="Line 180" y2="40.686" transform="translate(38.387 34.853)" fill="none" stroke="#f2182a" stroke-miterlimit="10" stroke-width="3"/>
+      <line id="Line_181" data-name="Line 181" y1="31.581" x2="23.631" transform="translate(38.387 43.958)" fill="none" stroke="#f2182a" stroke-miterlimit="10" stroke-width="3"/>
+      <line id="Line_182" data-name="Line 182" y1="10.155" x2="23.701" transform="translate(38.387 65.384)" fill="none" stroke="#f2182a" stroke-miterlimit="10" stroke-width="3"/>
+      <line id="Line_183" data-name="Line 183" x1="23.631" y1="31.581" transform="translate(14.757 43.958)" fill="none" stroke="#f2182a" stroke-miterlimit="10" stroke-width="3"/>
+      <line id="Line_184" data-name="Line 184" x1="23.701" y1="10.155" transform="translate(14.686 65.384)" fill="none" stroke="#f2182a" stroke-miterlimit="10" stroke-width="3"/>
+      <path id="Path_390" data-name="Path 390" d="M-39.928,810.228H-53.482a4.331,4.331,0,0,1-4.331-4.332V794.179H-35.6V805.9A4.331,4.331,0,0,1-39.928,810.228Z" transform="translate(85.092 -775.375)" fill="none" stroke="#f2182a" stroke-miterlimit="10" stroke-width="3"/>
+      <path id="Path_391" data-name="Path 391" d="M10.434,826.068V811.915H-66.34v14.154Z" transform="translate(66.34 -736.376)" fill="none" stroke="#f2182a" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+    <rect id="Rectangle_482" data-name="Rectangle 482" width="123" height="97" transform="translate(0 0.194)" fill="none"/>
+  </g>
+</svg>

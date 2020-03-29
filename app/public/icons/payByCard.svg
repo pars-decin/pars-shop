@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="123" height="97" viewBox="0 0 123 97">
+  <g id="payByCard" transform="translate(0.242 -0.194)">
+    <g id="Group_178" data-name="Group 178" transform="translate(20.46 21.278)">
+      <rect id="Rectangle_126" data-name="Rectangle 126" width="69.782" height="46.861" transform="translate(0 8.405)" stroke-width="3" stroke="#f2182a" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <rect id="Rectangle_127" data-name="Rectangle 127" width="69.782" height="8.659" transform="translate(0 37.947)" stroke-width="3" stroke="#f2182a" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <line id="Line_186" data-name="Line 186" x2="12.479" transform="translate(9.805 22.837)" fill="none" stroke="#f2182a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_393" data-name="Path 393" d="M42.213,794.894v8.4h57.94v38.457H112V794.894Z" transform="translate(-30.37 -794.894)" fill="none" stroke="#f2182a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <circle id="Ellipse_12" data-name="Ellipse 12" cx="6.412" cy="6.412" r="6.412" transform="translate(40.042 16.425)" stroke-width="3" stroke="#f2182a" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <circle id="Ellipse_13" data-name="Ellipse 13" cx="6.412" cy="6.412" r="6.412" transform="translate(47.981 16.425)" stroke-width="3" stroke="#f2182a" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+    <rect id="Rectangle_484" data-name="Rectangle 484" width="123" height="97" transform="translate(-0.242 0.194)" fill="none"/>
+  </g>
+</svg>
