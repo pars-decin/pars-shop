@@ -4,8 +4,17 @@
   align-items: flex-start;
   // overflow hidden interferes with sticky elements
   padding-right: 90px;
-  // &.home {}
+  position: relative;
+  &.home-view {
+    padding-right: 0;
+  }
   @include small-notebook {
     padding-right: 0;
+  }
+  @include portrait-tablet {
+    padding: 0 30px;
+    &.with-sidebar {
+      flex-direction: column;
+    }
   }
 }

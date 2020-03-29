@@ -40,12 +40,16 @@
       }
     }
     &__images {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
       img {
-        width: auto;
-        height: cols(3);
+        margin: 0 10px;
+        object-fit: cover;
+        width: 300px;
+        height: 300px;
         &:not(:last-child) {
           margin-bottom: 20px;
-          margin-right: 20px;
         }
       }
     }
@@ -67,6 +71,11 @@
     }
     &__cover {
       height: cols(4);
+    }
+  }
+  @include small-notebook {
+    &__cover {
+      border-right: 0;
     }
   }
   @include landscape-tablet {
@@ -94,8 +103,11 @@
   }
   @include portrait-tablet {
     &__content {
-      width: 100vw;
-      border-left: 0;
+      width: 100%;
+      border-right: 1px solid $red;
+      &__head {
+        border-top: 1px solid $red;
+      }
     }
     &__cover {
       width: cols(6);
@@ -107,10 +119,18 @@
     display: flex;
     flex-direction: column-reverse;
     &__content {
+      border-right: 0;
+      border-left: 0;
+      border-bottom: 0;
+      h2 {
+        margin-left: 0;
+      }
       &__head {
-        padding: 80px 30px;
+        border-top: 0;
+        padding: 80px 0px;
         height: auto;
         min-height: initial;
+        border-bottom: 0;
       }
       &__images {
         img {
@@ -123,10 +143,13 @@
       }
     }
     &__cover {
-      width: 100vw;
+      width: 100%;
+      height: cols(15);
+      min-height: initial;
       position: static;
       border-left: 0;
-      border-top: 1px solid $red;
+      border-top: 0;
+      border-bottom: 0;
     }
   }
 }

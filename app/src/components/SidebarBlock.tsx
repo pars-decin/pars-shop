@@ -16,7 +16,6 @@ interface Props {
   level: number;
   name: String;
   list: Array<Object | any>;
-  url: Array<string>;
 }
 
 const SidebarBlock: React.FC<Props> = ({
@@ -25,7 +24,6 @@ const SidebarBlock: React.FC<Props> = ({
   className = '',
   list,
   level,
-  url,
 }) => {
   const [{ isActive, expandList }, setStatus] = React.useState({
     isActive: false,
@@ -38,11 +36,8 @@ const SidebarBlock: React.FC<Props> = ({
   const handleClick = () => {
     if (!hasList) {
       // change serach params with url props (array)
-      const queryParams = queryString.stringify(
-        { c: url },
-        { arrayFormat: 'bracket' }
-      );
-      history.push(`${location.pathname}?${queryParams}`);
+      const queryParams = queryString.stringify({ c: id });
+      history.push(`/products?${queryParams}`);
     } else {
       setStatus(({ expandList, isActive }) => ({
         isActive: !isActive,
@@ -97,18 +92,20 @@ const SidebarBlock: React.FC<Props> = ({
       initial={'collapsed'}
       animate={'expanded'}
       exit={'collapsed'}
-      variants={variants}>
+      variants={variants}
+    >
       <SidebarItem
         id={id}
         className={`sidebar__block__header`}
         handleClick={handleClick}
         hasList={hasList}
-        isActive={isActive}>
+        isActive={isActive}
+      >
         {name}
       </SidebarItem>
       <AnimatePresence>
         {expandList && hasList && (
-          <SidebarList url={url} key={id} list={list} level={level + 1} />
+          <SidebarList key={id} list={list} level={level + 1} />
         )}
       </AnimatePresence>
     </motion.div>

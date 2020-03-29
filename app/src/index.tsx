@@ -8,7 +8,6 @@ import { createStore } from 'redux';
 import Root from './pages/Root';
 import { reducer } from './store/reducer';
 
-import '../helpers/methods.js';
 import './scss/index.scss';
 
 declare global {

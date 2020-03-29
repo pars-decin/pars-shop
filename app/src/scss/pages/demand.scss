@@ -1,0 +1,32 @@
+.demand-view {
+  padding-right: 0;
+  .demand-container {
+    padding: 0 cols(2) cols(1);
+    width: 100%;
+    &__intro {
+      padding: cols(0.5) 0 60px;
+      // border-bottom: 1px solid $red;
+      h1 {
+        font-size: 4.5rem;
+        letter-spacing: -0.01em;
+        margin-bottom: 30px;
+      }
+      p {
+        max-width: 700px;
+      }
+    }
+  }
+  @include big-destkop {
+    .demand-container {
+      padding: 0 cols(4) cols(0.5);
+    }
+  }
+  @include portrait-tablet {
+    padding-right: 30px;
+    .demand-container {
+      // padding: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

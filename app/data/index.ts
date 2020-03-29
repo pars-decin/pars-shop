@@ -1,18 +1,20 @@
-import staticData from './static';
-import shopItems from './shopItems';
-import categories from './categories';
-const products = require('./products').default;
+import rawCategories from './categories';
+import rawShopItems from './shopItems';
+import shopItemsVariants from './shopItemsVariants';
+
+import convertLevelsToArray from '../helpers/convertLevelsToArray';
+import makeTreeFromCategories from '../helpers/makeTreeFromCategories';
+import addCategoriesToShopItems from '../helpers/addCategoriesToShopItems';
+
+// data transformations
+
+const categories = convertLevelsToArray(rawCategories);
+const categoriesTree = makeTreeFromCategories(categories);
+const shopItems = addCategoriesToShopItems(rawShopItems, categories);
 
 export default {
-  staticData: staticData,
-  shopItems: shopItems.map(
-    ({ productIds, categories, imageNames, ...rest }) => ({
-      productIds: productIds.split('\n'),
-      categories: categories.split('\n'),
-      imageNames: imageNames.split('\n'),
-      ...rest,
-    })
-  ),
-  products: products,
-  categories: categories,
+  categoriesTree,
+  categories,
+  shopItems,
+  shopItemsVariants,
 };

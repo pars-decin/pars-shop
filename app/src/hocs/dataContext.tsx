@@ -1,7 +1,7 @@
 import React from 'react';
 
 import data from '../../data';
-import { Context as ContextTypes } from '../types';
+import { Context as ContextTypes } from '../../types';
 
 export const DataProvider: React.Context<ContextTypes> = React.createContext(
   data

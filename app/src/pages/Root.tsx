@@ -1,6 +1,6 @@
 // deps
 import React from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 const queryString = require('query-string');
 
@@ -19,20 +19,19 @@ import withDataProvider from '../hocs/dataContext';
 
 const Root: React.FC<RouteComponentProps> = ({ location }) => {
   const dispatch = useDispatch();
+  const pathname = useLocation();
 
-  // this fires only when the window was refreshed or user came from direct link
   React.useEffect(() => {
-    const activeCategories: { c: Array<string> } = queryString.parse(
-      location.search,
-      {
-        arrayFormat: 'bracket',
-      }
-    );
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  React.useEffect(() => {
+    const activeCategory: { c: string } = queryString.parse(location.search);
 
     // if there is no query string, than don't dispatch anything
     // and keep the default state
-    if ('c' in activeCategories) {
-      setActiveCategories(dispatch)(activeCategories.c);
+    if ('c' in activeCategory) {
+      setActiveCategories(dispatch)(activeCategory.c);
     }
   }, [location.search]);
 
@@ -41,7 +40,7 @@ const Root: React.FC<RouteComponentProps> = ({ location }) => {
       <Route exact path={`/`} component={Home} />
       <Route exact path={`/demand`} component={Demand} />
       <Route exact path={`/products`} component={Products} />
-      <Route path={`/product-detail/:uid`} component={Product} />
+      <Route path={`/product/:uid`} component={Product} />
     </Switch>
   );
 };

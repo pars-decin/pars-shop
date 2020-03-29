@@ -1,0 +1,46 @@
+.badge {
+  position: relative;
+  margin-left: 10px;
+  &__icon {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    color: $white;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    &::after {
+      content: '';
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      z-index: -1;
+      border-radius: 10px;
+      background-color: $red;
+    }
+  }
+  &__message {
+    display: block;
+    position: absolute;
+    bottom: calc(200% - 2px);
+    left: -100px + 12px;
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    background-color: $red;
+    color: $white;
+    &:after {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 8px;
+      background-image: url('/icons/badgeMessageArrow.svg');
+      position: absolute;
+      bottom: -8px;
+      right: calc(50% - 4px);
+    }
+  }
+}

@@ -1,10 +1,12 @@
 .products-grid {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin-right: -1px;
   align-items: flex-start;
-  // flex-shrink: 0;
-  flex-grow: 0;
-  // justify-content: flex-start;
+  &__load-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
 }

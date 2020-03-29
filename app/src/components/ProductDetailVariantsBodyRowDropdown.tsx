@@ -41,11 +41,13 @@ const ProductDetailVariantsBodyRowDropdown: React.FC<Props> = ({
       className={`variants__body__row__dropdown`}
       animate={showDropdown ? `show` : `hide`}
       initial={false}
-      variants={variants as any}>
+      variants={variants as any}
+    >
       {rowData.map((item, i) => (
         <motion.p
-          key={item}
-          variants={{ show: { opacity: 1 }, hide: { opacity: 0 } }}>
+          key={item + i}
+          variants={{ show: { opacity: 1 }, hide: { opacity: 0 } }}
+        >
           {labels[i]}: {item}
         </motion.p>
       ))}

@@ -13,27 +13,21 @@ interface Props {
 
 const ProductDetail: React.FC<Props> = ({ uid }) => {
   const { shopItems } = React.useContext(DataProvider);
-  const productData = shopItems.find(item => item.uid === uid);
 
-  const {
-    name,
-    perex,
-    specification,
-    productImage,
-    productIds,
-    imageNames,
-  } = productData;
+  const shopItem = shopItems.find(({ shopItemId }) => shopItemId === uid);
+
+  const { name, description, specification, coverPhoto, imageNames } = shopItem;
 
   return (
     <div className={`product-detail`}>
       <div className={`product-detail__content`}>
         <ProductDetailHead
           name={name}
-          perex={perex}
+          perex={description}
           specification={specification}
         />
         <h2>Varianty</h2>
-        <ProductVariants variantsId={productIds} />
+        <ProductVariants variantsId={uid} />
         {imageNames.length !== 0 && (
           <>
             <h2>Obrázky</h2>
@@ -42,7 +36,7 @@ const ProductDetail: React.FC<Props> = ({ uid }) => {
         )}
       </div>
       <div className={`product-detail__cover`}>
-        <Img src={`/img/products/${productImage}`} />
+        <Img src={`/img/products/${coverPhoto}`} />
       </div>
     </div>
   );

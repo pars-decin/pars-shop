@@ -1,0 +1,6 @@
+.link {
+  color: $red;
+  &:hover {
+    color: $red-hover;
+  }
+}

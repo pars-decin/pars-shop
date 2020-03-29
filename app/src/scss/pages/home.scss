@@ -1,0 +1,33 @@
+.home-view {
+  &__hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url('/img/others/homeHero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 cols(1);
+    &__main-category {
+      h1 {
+        color: $white;
+        font-size: cols(0.7);
+        margin-bottom: 30px;
+      }
+      h3 {
+        color: $white;
+      }
+      &--right {
+        h1,
+        h3 {
+          text-align: right;
+        }
+        .btn {
+          float: right;
+        }
+      }
+    }
+  }
+}

@@ -5,3 +5,21 @@ span {
   line-height: 2.3rem;
   letter-spacing: 0.05em;
 }
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.3em;
+  letter-spacing: -0.01em;
+  color: $black;
+}
+
+h3 {
+  color: $red;
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+}

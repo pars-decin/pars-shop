@@ -5,21 +5,13 @@ import { AnimatePresence } from 'framer-motion';
 interface Props {
   list: Array<any>;
   level: number;
-  url: Array<string>;
 }
 
-const SidebarList: React.FC<Props> = ({ list, level, url }) => {
+const SidebarList: React.FC<Props> = ({ list, level }) => {
   return (
     <React.Fragment>
       {list.map(({ id, name, list }, i) => (
-        <SidebarBlock
-          key={id}
-          id={id}
-          name={name}
-          list={list}
-          level={level}
-          url={[...url, id]}
-        />
+        <SidebarBlock key={id} id={id} name={name} list={list} level={level} />
       ))}
     </React.Fragment>
   );

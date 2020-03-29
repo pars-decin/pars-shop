@@ -1,0 +1,48 @@
+.checkbox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid $red;
+  $side: 20px;
+  $offset: 4px;
+  label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 40px;
+    font-weight: 400;
+    color: $gray;
+    margin-bottom: 0;
+    &:before {
+      content: '';
+      display: block;
+      width: $side;
+      height: $side;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid $red;
+      background-color: $white;
+    }
+    &:after {
+      content: '';
+      display: none;
+      background-color: $red;
+      width: $side - $offset * 2;
+      height: $side - $offset * 2;
+      position: absolute;
+
+      // plus one pixel for border
+      top: $offset + 1;
+      left: $offset + 1;
+    }
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    &:checked ~ label::after {
+      display: block;
+    }
+  }
+}

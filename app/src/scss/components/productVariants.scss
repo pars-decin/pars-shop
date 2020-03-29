@@ -58,11 +58,21 @@
       }
     }
   }
+  @include portrait-tablet {
+    &__body {
+      .trackY {
+        right: -3px !important;
+      }
+    }
+  }
   @include phone {
+    border-right: 1px solid $red;
+    border-left: 1px solid $red;
     &__head {
       &__item {
         padding-left: 30px;
         display: none;
+
         &:nth-child(1) {
           display: block;
         }

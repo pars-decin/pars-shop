@@ -1,0 +1,13 @@
+.cart-header {
+  display: flex;
+  background-color: $light-gray;
+  width: 100%;
+  &__col {
+    border: 1px solid $red;
+    border-bottom: 0;
+    &:not(:first-child) {
+      border-left: 0;
+    }
+    flex-grow: 1;
+  }
+}

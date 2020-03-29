@@ -4,7 +4,6 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        include: /src/,
         loader: 'awesome-typescript-loader',
       },
       {

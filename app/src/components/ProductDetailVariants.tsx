@@ -1,60 +1,48 @@
 import React from 'react';
 
 import { DataProvider } from '../hocs/dataContext';
-import { Product } from '../types';
+import { ShopItemVariant } from '../../types';
+import strings from '../../helpers/strings';
 
 import ProductDetailVariantsHead from './ProductDetailVariantsHead';
 import ProductDetailVariantsBody from './ProductDetailVariantsBody';
 
 interface Props {
-  variantsId: Array<string>;
+  variantsId: string;
 }
 
-const findVariants = (
-  products: Array<Product>,
-  ids: Array<string>
-): Array<Product> => {
-  const matches = products.reduce((acc, curr): Array<Product> => {
-    if (ids.includes(curr.productId)) {
-      return [...acc, curr];
-    }
-    return acc;
-  }, []);
-
-  return matches;
-};
-
-const filterProductsWithAttributes = (
-  products: Array<Product>,
-  attributes: Array<string>
-): Array<Array<string>> => {
-  const selectAttributes = (product: Product) => {
-    let data: Array<string> = [];
-    attributes.forEach(attribute => {
-      data = [...data, product[attribute]];
-    });
-    return data;
+const makeTable = (variants: Array<ShopItemVariant>) => {
+  return {
+    head: [
+      strings.dimension,
+      strings.material,
+      `${strings.weight} [${variants[0].coefUnit}]`,
+    ],
+    body: variants.map(({ dimensions, material, coef }) => [
+      dimensions,
+      material,
+      coef,
+    ]),
+    varioIds: variants.map(({ varioId }) => varioId),
   };
-
-  return products.map(product => selectAttributes(product));
 };
 
 const ProductVariants: React.FC<Props> = ({ variantsId }) => {
-  const { products, staticData } = React.useContext(DataProvider);
-  const { productDetailVariants } = staticData;
-  const matchedVariants = findVariants(products, variantsId);
-  const rowsData = filterProductsWithAttributes(
-    matchedVariants,
-    Object.keys(productDetailVariants)
+  const { shopItemsVariants } = React.useContext(DataProvider);
+
+  const matchedVariants = shopItemsVariants.filter(
+    ({ shopItemId }) => shopItemId === variantsId
   );
+
+  const { head, body, varioIds } = makeTable(matchedVariants);
+
   return (
     <div className={`variants`}>
-      <ProductDetailVariantsHead
-        labels={Object.values(productDetailVariants)}
-      />
+      <ProductDetailVariantsHead labels={head} />
       <ProductDetailVariantsBody
-        labels={Object.values(productDetailVariants)}
-        rowsData={rowsData}
+        labels={head}
+        rowsData={body}
+        varioIds={varioIds}
       />
     </div>
   );

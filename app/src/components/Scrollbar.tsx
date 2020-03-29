@@ -31,7 +31,6 @@ const Scrollbar: React.FC<Props> = ({ styles, children }) => {
       thumbYProps={{
         renderer: props => {
           const { elementRef, style, ...restProps } = props;
-          console.log(props);
           return (
             <div
               {...restProps}
@@ -41,7 +40,8 @@ const Scrollbar: React.FC<Props> = ({ styles, children }) => {
             />
           );
         },
-      }}>
+      }}
+    >
       {children}
     </Scrollbars>
   );

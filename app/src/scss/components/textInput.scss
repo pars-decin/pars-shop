@@ -1,0 +1,31 @@
+.text-input {
+  position: relative;
+  border: 1px solid $red;
+  width: 100%;
+  &__is-optional {
+    color: $gray;
+    font-weight: 400;
+  }
+  &.error {
+    color: $red;
+  }
+  label {
+    position: absolute;
+    color: $red;
+    top: 8px;
+    left: 20px;
+  }
+  input,
+  textarea {
+    border: 0;
+    padding: 40px 0px 20px 20px;
+    width: 100%;
+    // overwrite :not(output):-moz-ui-invalid's box shadow in Mozilla
+    box-shadow: none;
+  }
+  textarea {
+    resize: none;
+    margin-bottom: 0;
+    height: 100%;
+  }
+}
