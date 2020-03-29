@@ -11,8 +11,7 @@ module.exports = merge(base, {
     filename: 'static/js/main.[hash:8].js',
     chunkFilename: 'static/js/[name].chunk.[hash:8].js',
     path: path.resolve(__dirname, 'build'),
-    publicPath:
-      'https://cdn.jsdelivr.net/gh/dominik2323/pars-shop/app/build/static/',
+    publicPath: 'https://cdn.jsdelivr.net/gh/dominik2323/pars-shop/app/public/',
   },
   module: {
     rules: [
