@@ -37,7 +37,7 @@
       display: block;
       width: 12px;
       height: 8px;
-      background-image: url('/icons/badgeMessageArrow.svg');
+      background-image: url('#{$prefix}/icons/badgeMessageArrow.svg');
       position: absolute;
       bottom: -8px;
       right: calc(50% - 4px);

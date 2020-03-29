@@ -8,8 +8,8 @@ const base = require('./webpack.config.base');
 module.exports = merge(base, {
   mode: 'production',
   output: {
-    filename: 'static/js/main.[hash:8].js',
-    chunkFilename: 'static/js/[name].chunk.[hash:8].js',
+    filename: 'static/js/main.js',
+    chunkFilename: 'static/js/[name].chunk.js',
     path: path.resolve(__dirname, 'build'),
   },
   module: {
@@ -17,7 +17,16 @@ module.exports = merge(base, {
       {
         // sass/scss loader to load sass-scss style files
         test: /\.(sass|scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              prependData: `$prefix: 'https://cdn.jsdelivr.net/gh/dominik2323/pars-shop@latest/app/public';`,
+            },
+          },
+        ],
       },
       {
         // copies image files to assets folder in destination folder - build
@@ -28,8 +37,7 @@ module.exports = merge(base, {
             options: {
               name: '[name].[hash:8].[ext]',
               outputPath: 'static/assets',
-              publicPath:
-                'https://cdn.jsdelivr.net/gh/dominik2323/pars-shop/app/public/',
+              publicPath: 'static/assets',
             },
           },
         ],
@@ -70,7 +78,7 @@ module.exports = merge(base, {
       // favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
     }),
     new MiniCssExtractPlugin({
-      filename: 'static/css/[name].[hash:8].css',
+      filename: 'static/css/[name].css',
     }),
   ],
 });

@@ -32,7 +32,7 @@
   }
   &--disabled {
     background-color: $red;
-    background-image: url('/icons/tick.svg');
+    background-image: url('#{$prefix}/icons/tick.svg');
     background-repeat: no-repeat;
     background-position: center;
   }

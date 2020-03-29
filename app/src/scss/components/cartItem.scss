@@ -61,7 +61,7 @@
       &__content {
         width: $item-height + 20px;
         height: $item-height;
-        background-image: url('/icons/removeProductFromCart.svg');
+        background-image: url('#{$prefix}/icons/removeProductFromCart.svg');
         background-repeat: no-repeat;
         background-position: center;
       }

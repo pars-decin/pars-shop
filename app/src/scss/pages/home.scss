@@ -2,7 +2,7 @@
   &__hero {
     height: 100vh;
     width: 100%;
-    background-image: url('/img/others/homeHero.jpg');
+    background-image: url('#{$prefix}/img/others/homeHero.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
