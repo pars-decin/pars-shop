@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const base = require('./webpack.config.base');
+const dotenv = require('dotenv-webpack');
 
 module.exports = merge(base, {
   mode: 'development',
@@ -50,6 +51,7 @@ module.exports = merge(base, {
       template: path.join(__dirname, 'public', 'index.html'),
       // favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
     }),
+    new dotenv()
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),

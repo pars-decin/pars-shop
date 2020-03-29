@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWeppackPlugin = require('terser-webpack-plugin');
 const merge = require('webpack-merge');
 const base = require('./webpack.config.base');
+const dotenv = require('dotenv-webpack');
 
 module.exports = merge(base, {
   mode: 'production',
@@ -80,5 +81,6 @@ module.exports = merge(base, {
     new MiniCssExtractPlugin({
       filename: 'static/css/[name].css',
     }),
+    new dotenv()
   ],
 });
