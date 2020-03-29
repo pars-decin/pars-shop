@@ -21,6 +21,7 @@
     "babel-loader": "^8.0.6",
     "connected-react-router": "^6.6.1",
     "css-loader": "^3.2.1",
+    "dotenv-webpack": "^1.7.0",
     "file-loader": "^5.0.2",
     "framer-motion": "^1.7.0",
     "html-loader": "^0.5.5",

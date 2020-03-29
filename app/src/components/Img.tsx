@@ -14,7 +14,12 @@ const Img: React.FC<Props> = ({
   className = '',
 }) => {
   return (
-    <img src={src} alt={alt} onClick={handleClick} className={className} />
+    <img
+      src={process.env.ASSET_PREFIX + src}
+      alt={alt}
+      onClick={handleClick}
+      className={className}
+    />
   );
 };
 

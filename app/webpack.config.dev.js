@@ -15,7 +15,16 @@ module.exports = merge(base, {
     rules: [
       {
         test: /\.(sass|scss)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              prependData: `$prefix: '';`,
+            },
+          },
+        ],
       },
       {
         test: /\.(svg|png|jpg|jpeg|gif|mp3|ico)$/,
