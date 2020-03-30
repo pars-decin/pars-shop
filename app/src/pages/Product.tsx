@@ -15,7 +15,7 @@ const Product: React.FC<Props> = () => {
   const { uid } = useParams();
   return (
     <>
-      <View className={`product-detail-view`}>
+      <View className={`product-detail-view with-sidebar`}>
         <Sidebar />
         <ProductDetail uid={uid} />
       </View>

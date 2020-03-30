@@ -22,6 +22,9 @@
     width: 100%;
     // overwrite :not(output):-moz-ui-invalid's box shadow in Mozilla
     box-shadow: none;
+    &:focus {
+      outline: none;
+    }
   }
   textarea {
     resize: none;

@@ -18,7 +18,7 @@ const Home: React.FC<Props> = () => {
   const { history } = React.useContext(LocationProvider);
 
   return (
-    <View className={`home-view`}>
+    <View className={`home-view with-sidebar`}>
       <Sidebar />
       <div className={`home-view__hero`}>
         {categoriesTree.map(({ name, id }, i) => (

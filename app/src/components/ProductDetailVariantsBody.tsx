@@ -14,10 +14,18 @@ const ProductDetailVariantsBody: React.FC<Props> = ({
   labels,
   varioIds,
 }) => {
+  const rowHeight = 47;
+  const rowsCount = rowsData.length;
   return (
     <div className={`variants__body`}>
       <Scrollbar
-        styles={{ height: (window.innerHeight / 15) * 5, minHeight: 400 }}
+        styles={{
+          height:
+            rowHeight * rowsCount >= 400
+              ? (window.innerHeight / 15) * 5
+              : rowHeight * rowsCount,
+          minHeight: 300,
+        }}
       >
         {rowsData.map((rowData, i) => (
           <ProductDetailVariantsBodyRow

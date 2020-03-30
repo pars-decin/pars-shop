@@ -5,9 +5,7 @@
   // overflow hidden interferes with sticky elements
   padding-right: 90px;
   position: relative;
-  &.home-view {
-    padding-right: 0;
-  }
+
   @include small-notebook {
     padding-right: 0;
   }
