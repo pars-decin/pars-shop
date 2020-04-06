@@ -10,6 +10,7 @@ export default function makeTreeFromCategories(
 
   function makeTree(category, level, parentId) {
     let categoryId = parentId + shortHash(category.levels[0]);
+
     if (!dump[categoryId]) {
       dump[categoryId] = {
         name: category.levels[0],
@@ -19,19 +20,25 @@ export default function makeTreeFromCategories(
       };
     }
 
-    if (parentId.length === 0 && tree.findIndex(x => x.id === categoryId) < 0) {
+    if (
+      parentId.length === 0 &&
+      tree.findIndex((x) => x.id === categoryId) < 0
+    ) {
       tree.push(dump[categoryId]);
     } else if (
       parentId.length > 0 &&
       // Same here with definition on beggining of function.
-      dump[parentId].list.findIndex(x => x.id === categoryId) === -1
+      dump[parentId].list.findIndex((x) => x.id === categoryId) === -1
     ) {
       dump[parentId].list.push(dump[categoryId]);
     }
 
     if (category.levels.length > 1) {
       makeTree(
-        { ...category, levels: category.levels.slice(1) },
+        {
+          ...category,
+          levels: category.levels.slice(1),
+        },
         level + 1,
         categoryId
       );

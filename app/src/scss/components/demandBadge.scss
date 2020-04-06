@@ -1,0 +1,27 @@
+.demand-badge {
+  display: inline-block;
+  padding: 0.2rem 0.9rem 0.2rem 0.7rem;
+  margin-left: 5px;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  background-color: #f2182a;
+  color: white;
+  text-align: center;
+  @include portrait-tablet {
+    &--nav {
+      background-color: #fff;
+      color: $red;
+      padding: 0.2rem 0.9rem 0.2rem 0.7rem;
+      font-size: inherit;
+      margin-left: 1.5rem;
+    }
+    &--burger {
+      padding: 0.4rem 1.2rem 0.4rem 1rem;
+      font-size: 1.6rem;
+      margin-right: 10px;
+      @at-root .hamburger.is-active .demand-badge {
+        display: none !important;
+      }
+    }
+  }
+}

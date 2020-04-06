@@ -36,4 +36,7 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+  @include phone {
+    padding: 8px 20px;
+  }
 }

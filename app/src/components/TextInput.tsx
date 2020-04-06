@@ -1,6 +1,8 @@
 import React, { ReactElement } from 'react';
 
 import Badge from '../components/Badge';
+import TextInputCounter from '../components/TextInputCounter';
+import TextInputError from './TextInputError';
 
 import strings from '../../helpers/strings';
 
@@ -14,6 +16,8 @@ export interface Props {
   className?: string;
   validate?: (value: string) => boolean;
   intialValue?: string | number;
+  withCounter?: boolean;
+  errorMsg?: string;
 }
 
 const TextInput: React.FC<Props> = ({
@@ -26,23 +30,45 @@ const TextInput: React.FC<Props> = ({
   validate = () => false,
   className = '',
   intialValue = '',
+  withCounter = false,
+  errorMsg,
 }) => {
   const [data, setData] = React.useState({
     value: intialValue,
     hasError: false,
   });
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setData({
       value: e.target.value,
       hasError: false,
     });
   };
 
-  const handleBlur = e => {
+  const handleBlur = (e) => {
     setData({
       value: e.target.value,
       hasError: validate(e.target.value),
+    });
+  };
+
+  const handleCounter = (type: 'inc' | 'dec') => {
+    const increment = 10;
+    setData(({ hasError, value }) => {
+      const newValue =
+        // prettier-ignore
+        type === 'dec'
+          ? (
+            // @ts-ignore
+            parseInt(value) - increment
+          ) : (
+            // @ts-ignore
+            parseInt(value) + increment
+          );
+      return {
+        hasError: validate(newValue),
+        value: newValue <= 0 ? 0 : newValue,
+      };
     });
   };
 
@@ -51,10 +77,9 @@ const TextInput: React.FC<Props> = ({
       <label htmlFor={id}>
         {label}
         {isOptional && (
-          <span
-            className={`text-input__is-optional`}
-          >{`\u00a0(${strings.optional})`}</span>
+          <span className={`is-optional`}>{`\u00a0(${strings.optional})`}</span>
         )}
+        {data.hasError && <TextInputError errorMsg={errorMsg} />}
         {badgeMessage.length !== 0 && (
           <Badge type={'info'}>{badgeMessage}</Badge>
         )}
@@ -69,15 +94,23 @@ const TextInput: React.FC<Props> = ({
           value={data.value}
         />
       ) : (
-        <input
-          type='text'
-          id={id}
-          name={name}
-          onChange={handleChange}
-          required={!isOptional}
-          onBlur={handleBlur}
-          value={data.value}
-        />
+        <>
+          <input
+            type='text'
+            id={id}
+            name={name}
+            onChange={handleChange}
+            required={!isOptional}
+            onBlur={handleBlur}
+            value={data.value}
+          />
+          {withCounter && (
+            <TextInputCounter
+              dec={() => handleCounter('dec')}
+              inc={() => handleCounter('inc')}
+            />
+          )}
+        </>
       )}
     </div>
   );

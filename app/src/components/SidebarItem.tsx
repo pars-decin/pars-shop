@@ -35,7 +35,8 @@ const SidebarItem: React.FC<Props> = ({
       variants={{
         collapsed: { x: -25, opacity: 0, ...transition },
         expanded: { x: 0, opacity: 1, ...transition },
-      }}>
+      }}
+    >
       {hasList && <Img src={`/icons/${isActive ? `minus` : `plus`}.svg`} />}
       {children}
     </motion.span>

@@ -18,34 +18,41 @@ import { CategoriesTree, Category } from '../../types';
 
 interface Props {}
 
-let output: CategoriesTree;
-const findCurrentCategory = (
-  categories: Array<CategoriesTree>,
-  activeCategory: string
-): CategoriesTree => {
-  if (!output) {
-    for (const category of categories) {
-      if (category.id === activeCategory) {
-        output = category;
-      } else {
-        findCurrentCategory(category.list, activeCategory);
+const Products: React.FC<Props> = () => {
+  const { activeCategories } = useSelector((state) => state);
+  const { shopItems, categoriesTree } = React.useContext(DataProvider);
+  const [currentCategory, setCurrentCategory] = React.useState<
+    CategoriesTree
+  >();
+
+  const productsRef = React.useRef(null);
+
+  let output: CategoriesTree;
+  const findCurrentCategory = (
+    categories: Array<CategoriesTree>,
+    activeCategory: string
+  ): CategoriesTree => {
+    if (!output) {
+      for (const category of categories) {
+        if (category.id === activeCategory) {
+          output = category;
+        } else {
+          findCurrentCategory(category.list, activeCategory);
+        }
       }
     }
-  }
-  return output;
-};
+    return output;
+  };
 
-const Products: React.FC<Props> = () => {
-  const activeCategories = useSelector(state => state.activeCategories);
-  const { shopItems, categoriesTree } = React.useContext(DataProvider);
-  // FIX ME: first run is undefined
+  React.useEffect(() => {
+    setCurrentCategory(findCurrentCategory(categoriesTree, activeCategories));
+  }, [activeCategories]);
 
-  const currentCategory = findCurrentCategory(categoriesTree, activeCategories);
   return (
     <>
       <View className={`products-view with-sidebar`}>
-        <Sidebar />
-        <div className={`products`}>
+        <Sidebar scrollToRef={productsRef} />
+        <div ref={productsRef} className={`products`}>
           <ProductsCover src={currentCategory?.coverImg} />
           <ProductsLabel label={currentCategory?.name} />
           <ProductsGrid shopItems={shopItems} />

@@ -32,9 +32,7 @@ const Home: React.FC<Props> = () => {
             <h1>{name}</h1>
             <Button
               className={`btn--primary`}
-              handleClick={() =>
-                history.push(`/products?c=${id + shortHash('Všechno')}`)
-              }
+              handleClick={() => history.push(`/products?c=${id}`)}
             >
               {consts.detail}
             </Button>

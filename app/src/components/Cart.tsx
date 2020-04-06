@@ -6,7 +6,7 @@ import { DataProvider } from '../hocs/dataContext';
 
 interface Props {}
 
-function cart({}: Props): ReactElement {
+function Cart({}: Props): ReactElement {
   const [varioIds, setVarioIds] = React.useState([]);
   const { shopItems, shopItemsVariants } = React.useContext(DataProvider);
   const [cookies, setCookies, removeCookies] = useCookies();
@@ -15,10 +15,10 @@ function cart({}: Props): ReactElement {
     setVarioIds(cookies.parsCart || []);
   }, [cookies.parsCart]);
 
-  const removeItem = varioId => {
+  const removeItem = (varioId) => {
     setCookies(
       'parsCart',
-      cookies.parsCart.filter(x => x !== varioId)
+      cookies.parsCart.filter((x) => x !== varioId)
     );
     // @ts-ignore
     window.updateDemandBadge();
@@ -29,10 +29,10 @@ function cart({}: Props): ReactElement {
       {varioIds.length !== 0 ? (
         varioIds.map((varioId, i) => {
           const { dimensions, shopItemId } = shopItemsVariants.find(
-            variant => variant.varioId === varioId
+            (variant) => variant.varioId === varioId
           );
           const { name } = shopItems.find(
-            shopItem => shopItem.shopItemId === shopItemId
+            (shopItem) => shopItem.shopItemId === shopItemId
           );
           return (
             <CartItem
@@ -41,7 +41,7 @@ function cart({}: Props): ReactElement {
               index={i}
               shopItemId={varioId}
               perex={dimensions}
-              removeItem={shopItemId => removeItem(shopItemId)}
+              removeItem={(shopItemId) => removeItem(shopItemId)}
               textInputs={[
                 {
                   id: 'dimensions',
@@ -49,14 +49,18 @@ function cart({}: Props): ReactElement {
                   name: 'dimensions',
                   badgeMessage: 'Lorem ipsum dolor sit amet',
                   intialValue: 3,
-                  validate: value => !/^[0-9]/i.test(value),
+                  // @ts-ignore
+                  validate: (value) => !/^[0-9]/i.test(value) && value < 0,
+                  withCounter: true,
                 },
                 {
                   id: 'itemNo',
                   label: 'Počet kusů',
                   name: 'itemNo',
                   intialValue: 1,
-                  validate: value => !/^[0-9]/i.test(value),
+                  // @ts-ignore
+                  validate: (value) => !/^[0-9]/i.test(value) && value < 0,
+                  withCounter: true,
                 },
               ]}
             />
@@ -69,4 +73,4 @@ function cart({}: Props): ReactElement {
   );
 }
 
-export default cart;
+export default Cart;

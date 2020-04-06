@@ -9,6 +9,7 @@ import Root from './pages/Root';
 import { reducer } from './store/reducer';
 
 import './scss/index.scss';
+import 'hamburgers/_sass/hamburgers/hamburgers.scss';
 
 declare global {
   interface Window {

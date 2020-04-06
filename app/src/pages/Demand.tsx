@@ -20,7 +20,9 @@ const formConfig = [
     label: 'Jméno',
     badgeMessage: '',
     isOptional: false,
-    validate: value => !/^[a-z ,.'-]+$/i.test(value),
+    validate: (value) =>
+      !new RegExp('(?=^.{0,40}$)^[a-zA-Z-]+s[a-zA-Z-]+$', 'i').test(value),
+    errorMsg: 'Zkontrolujte zadané informace.',
   },
   {
     component: 'TextInput',
@@ -30,7 +32,8 @@ const formConfig = [
     label: 'Firma',
     badgeMessage: '',
     isOptional: false,
-    validate: value => !/^[a-z0-9 ,.-]+$/i.test(value),
+    validate: (value) => !/^[a-z0-9 ,.-]+$/i.test(value),
+    errorMsg: 'Zkontrolujte zadané informace.',
   },
   {
     component: 'TextInput',
@@ -40,7 +43,8 @@ const formConfig = [
     label: 'Telefon',
     badgeMessage: '',
     isOptional: false,
-    validate: value => !/^[0-9 ]/i.test(value),
+    validate: (value) => !/^[0-9 ]/i.test(value),
+    errorMsg: 'Zkontrolujte zadané informace.',
   },
   {
     component: 'TextInput',
@@ -50,8 +54,9 @@ const formConfig = [
     label: 'E-mail',
     badgeMessage: '',
     isOptional: false,
-    validate: value =>
+    validate: (value) =>
       !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value),
+    errorMsg: 'Zkontrolujte zadané informace.',
   },
   {
     component: 'TextInput',
@@ -61,7 +66,8 @@ const formConfig = [
     label: 'IČO',
     badgeMessage: '',
     isOptional: true,
-    validate: value => !/^[0-9]/i.test(value),
+    validate: (value) => !/^[0-9]/i.test(value),
+    errorMsg: 'Zkontrolujte zadané informace.',
   },
   {
     component: 'TextInput',
@@ -71,7 +77,8 @@ const formConfig = [
     label: 'DIČ',
     badgeMessage: 'Lorem ipsum',
     isOptional: true,
-    validate: value => !/^[0-9]/i.test(value),
+    validate: (value) => !/^[0-9]/i.test(value),
+    errorMsg: 'Zkontrolujte zadané informace.',
   },
   {
     component: 'TextInput',
@@ -83,6 +90,7 @@ const formConfig = [
     multiline: true,
     isOptional: true,
     validate: () => false,
+    errorMsg: 'Zkontrolujte zadané informace.',
   },
   {
     component: 'Checkbox',
@@ -99,7 +107,7 @@ const formConfig = [
 ];
 
 const Demand: React.FC<Props> = () => {
-  const renderForm = formItem => {
+  const renderForm = (formItem) => {
     if (formItem.component === 'TextInput') {
       return (
         <div key={formItem.id} className={`form-item ${formItem.className}`}>
@@ -111,6 +119,7 @@ const Demand: React.FC<Props> = () => {
             isOptional={formItem.isOptional}
             validate={formItem.validate}
             multiline={formItem.multiline}
+            errorMsg={formItem.errorMsg}
           />
         </div>
       );
@@ -147,7 +156,7 @@ const Demand: React.FC<Props> = () => {
                 <Cart />
               </FormGroup>
               <FormGroup header={`Osobní údaje`}>
-                {formConfig.map(formItem => renderForm(formItem))}
+                {formConfig.map((formItem) => renderForm(formItem))}
               </FormGroup>
               <Button type={`submit`} className={`btn--primary`}>
                 odeslat poptávku
