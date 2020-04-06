@@ -1,8 +1,13 @@
 const burger = document.querySelector('#hamburger');
 const nav = document.querySelector('.topbar__nav');
 
-function toggleDisplay(node, type) {
-  node.setAttribute('style', 'display: ' + type + ';');
+function replaceClassName(prev, next, node) {
+  if (node.classList.contains(prev)) {
+    node.classList.remove(prev);
+    node.classList.add(next);
+  } else {
+    node.classList.add(next);
+  }
 }
 
 function toggleLogoColors(color) {
@@ -10,22 +15,22 @@ function toggleLogoColors(color) {
   const whiteLogo = document.querySelector('#logo-white');
 
   if (color === 'white') {
-    toggleDisplay(redLogo, 'none');
-    toggleDisplay(whiteLogo, 'block');
+    replaceClassName('hide', 'show', whiteLogo);
+    replaceClassName('show', 'hide', redLogo);
   } else if (color === 'red') {
-    toggleDisplay(redLogo, 'block');
-    toggleDisplay(whiteLogo, 'none');
+    replaceClassName('show', 'hide', whiteLogo);
+    replaceClassName('hide', 'show', redLogo);
   }
 }
 
 function toggleBurgerMenu() {
   if (burger.classList.contains('is-active')) {
     burger.classList.remove('is-active');
-    toggleDisplay(nav, 'none');
+    replaceClassName('show', 'hide', nav);
     toggleLogoColors('red');
   } else {
     burger.classList.add('is-active');
-    toggleDisplay(nav, 'flex');
+    replaceClassName('hide', 'show', nav);
     toggleLogoColors('white');
   }
 }

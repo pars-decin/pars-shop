@@ -101,6 +101,14 @@
     &__brand {
       position: relative;
       z-index: 1;
+      img {
+        &.show {
+          display: block;
+        }
+        &.hide {
+          display: none;
+        }
+      }
     }
     &__nav {
       top: 0;
@@ -112,6 +120,12 @@
       display: none;
       flex-direction: column;
       justify-content: center;
+      &.show {
+        display: flex;
+      }
+      &.hide {
+        display: none;
+      }
       a {
         font-size: 2.8rem;
         color: $white;
@@ -155,8 +169,9 @@
   }
   @include phone {
     &__brand {
+      margin-left: 30px;
       img {
-        width: 80%;
+        height: 40px;
       }
     }
   }
