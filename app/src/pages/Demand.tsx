@@ -21,7 +21,9 @@ const formConfig = [
     badgeMessage: '',
     isOptional: false,
     validate: (value) =>
-      !new RegExp('(?=^.{0,40}$)^[a-zA-Z-]+s[a-zA-Z-]+$', 'i').test(value),
+      !new RegExp("^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$", 'g').test(
+        value
+      ),
     errorMsg: 'Zkontrolujte zadané informace.',
   },
   {
@@ -32,7 +34,10 @@ const formConfig = [
     label: 'Firma',
     badgeMessage: '',
     isOptional: false,
-    validate: (value) => !/^[a-z0-9 ,.-]+$/i.test(value),
+    validate: (value) =>
+      !new RegExp("^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$", 'g').test(
+        value
+      ),
     errorMsg: 'Zkontrolujte zadané informace.',
   },
   {
@@ -43,7 +48,10 @@ const formConfig = [
     label: 'Telefon',
     badgeMessage: '',
     isOptional: false,
-    validate: (value) => !/^[0-9 ]/i.test(value),
+    validate: (value) =>
+      !/^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$/i.test(
+        value
+      ),
     errorMsg: 'Zkontrolujte zadané informace.',
   },
   {

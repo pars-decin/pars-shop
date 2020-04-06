@@ -61,7 +61,7 @@
     border-bottom: 1px solid $red;
     border-right: 1px solid $red;
     position: sticky;
-    top: 90px;
+    top: $navbarHeight;
     z-index: -1;
   }
   @include big-destkop {
