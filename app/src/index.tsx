@@ -10,6 +10,7 @@ import { reducer } from './store/reducer';
 
 import './scss/index.scss';
 import 'hamburgers/_sass/hamburgers/hamburgers.scss';
+import 'polyfill-object.fromentries';
 
 declare global {
   interface Window {

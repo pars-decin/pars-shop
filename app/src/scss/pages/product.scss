@@ -1,0 +1,8 @@
+.product-detail-view {
+  @include portrait-tablet {
+    .sidebar {
+      width: calc(100% + 60px);
+      left: -30px;
+    }
+  }
+}

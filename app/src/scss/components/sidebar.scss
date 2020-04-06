@@ -13,32 +13,27 @@
     }
   }
   @include portrait-tablet {
+    position: relative;
+    top: 0;
+    width: 100%;
+    min-width: initial;
+    max-width: initial;
+    background-color: $white;
+    border-right: 0;
     &__toggler {
       display: flex;
       cursor: pointer;
       align-items: center;
       padding: 30px;
+      &.show {
+        margin-bottom: 0;
+      }
       img {
         width: 22px;
         height: auto;
         display: block;
         margin-right: 30px;
-        // transform: rotate(180deg);
       }
-      // &.show {
-      //   img {
-      //     transform: rotate(0);
-      //   }
-      // }
     }
-    position: relative;
-    top: 0;
-    left: -30px;
-    width: calc(100% + 60px);
-    min-width: initial;
-    max-width: initial;
-    background-color: $white;
-    // margin-bottom: 30px;
-    border-right: 0;
   }
 }
