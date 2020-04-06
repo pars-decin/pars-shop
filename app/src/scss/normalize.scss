@@ -1,8 +1,19 @@
 html {
   font-size: 62.5%;
+  @include phone {
+    font-size: 55%;
+  }
 }
+.hamburger {
+  display: flex;
+}
+
 .root {
   box-sizing: border-box;
+  padding-top: $navbarHeight;
+  @include portrait-tablet {
+    padding-top: $navbarHeight / 3 * 4;
+  }
   width: 100%;
   * {
     box-sizing: border-box;

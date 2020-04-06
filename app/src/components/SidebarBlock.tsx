@@ -1,21 +1,40 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-// import { useDispatch } from 'react-redux';
 import { useSelector } from '../store/reducer';
 
 import SidebarItem from './SidebarItem';
 import SidebarList from './SidebarList';
 
-// import { setActiveCategories } from '../store/actions';
 import { LocationProvider } from '../hocs/withLocation';
 const queryString = require('query-string');
 
+const variants = {
+  expanded: {
+    height: 'auto',
+    opacity: 1,
+    transition: {
+      when: 'beforeChildren',
+      restSpeed: 2,
+      restDelta: 2,
+    },
+  },
+  collapsed: {
+    height: 0,
+    opacity: 0,
+    transition: {
+      when: 'afterChildren',
+      restSpeed: 2,
+      restDelta: 2,
+    },
+  },
+};
 interface Props {
   id: string;
   className?: String;
   level: number;
   name: String;
   list: Array<Object | any>;
+  scrollToRef?: React.MutableRefObject<HTMLElement>;
 }
 
 const SidebarBlock: React.FC<Props> = ({
@@ -24,26 +43,20 @@ const SidebarBlock: React.FC<Props> = ({
   className = '',
   list,
   level,
+  scrollToRef,
 }) => {
   const [{ isActive, expandList }, setStatus] = React.useState({
     isActive: false,
     expandList: false,
   });
-  const { location, history } = React.useContext(LocationProvider);
-  const activeCategories = useSelector(state => state.activeCategories);
+
+  const { history } = React.useContext(LocationProvider);
+  const activeCategories = useSelector((state) => state.activeCategories);
   const hasList = list.length !== 0;
 
   const handleClick = () => {
-    if (!hasList) {
-      // change serach params with url props (array)
-      const queryParams = queryString.stringify({ c: id });
-      history.push(`/products?${queryParams}`);
-    } else {
-      setStatus(({ expandList, isActive }) => ({
-        isActive: !isActive,
-        expandList: !expandList,
-      }));
-    }
+    const queryParams = queryString.stringify({ c: id });
+    history.push(`/products?${queryParams}`);
   };
 
   React.useEffect(() => {
@@ -59,30 +72,6 @@ const SidebarBlock: React.FC<Props> = ({
       setStatus({ isActive: false, expandList: false });
     }
   }, [activeCategories]);
-
-  const transition = {};
-  const variants = {
-    expanded: {
-      height: 'auto',
-      opacity: 1,
-      transition: {
-        ...transition,
-        when: 'beforeChildren',
-        restSpeed: 2,
-        restDelta: 2,
-      },
-    },
-    collapsed: {
-      height: 0,
-      opacity: 0,
-      transition: {
-        ...transition,
-        when: 'afterChildren',
-        restSpeed: 2,
-        restDelta: 2,
-      },
-    },
-  };
 
   return (
     <motion.div
@@ -105,7 +94,12 @@ const SidebarBlock: React.FC<Props> = ({
       </SidebarItem>
       <AnimatePresence>
         {expandList && hasList && (
-          <SidebarList key={id} list={list} level={level + 1} />
+          <SidebarList
+            key={id}
+            list={list}
+            level={level + 1}
+            scrollToRef={scrollToRef}
+          />
         )}
       </AnimatePresence>
     </motion.div>

@@ -81,6 +81,6 @@ module.exports = merge(base, {
     new MiniCssExtractPlugin({
       filename: 'static/css/[name].css',
     }),
-    new dotenv()
+    new dotenv({ path: './.prod.env' }),
   ],
 });

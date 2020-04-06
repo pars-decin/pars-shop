@@ -28,11 +28,12 @@ const CartItem: React.FC<Props> = ({
           <p>{perex}</p>
         </div>
       </div>
-      {textInputs.map(textInput => (
+      {textInputs.map((textInput) => (
         <div
           key={textInput.id}
           className={`cart-item__col cart-item__col__input`}
         >
+          {/* header of the table */}
           {index === 0 && (
             <div className={`cart-item__col__header`}>
               {textInput.label}

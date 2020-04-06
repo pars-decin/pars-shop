@@ -1,12 +1,6 @@
 export default [
   {
     level0: 'Ocel',
-    level1: 'Všechno',
-    coverImg: 'dummy_cover.jpg',
-    shopItemId: 'vsechno-OCEL',
-  },
-  {
-    level0: 'Ocel',
     level1: 'Instalatér',
     level2: 'Potrubní díly',
     coverImg: 'dummy_cover.jpg',
@@ -1021,12 +1015,6 @@ export default [
     level2: 'Ostatní',
     coverImg: 'dummy_cover.jpg',
     shopItemId: 'pletivo-4hr-pvc-OCEL',
-  },
-  {
-    level0: 'Nerez',
-    level1: 'Všechno',
-    coverImg: 'dummy_cover.jpg',
-    shopItemId: 'vsechno-NEREZ',
   },
   {
     level0: 'Nerez',

@@ -24,16 +24,15 @@ const Root: React.FC<RouteComponentProps> = ({ location }) => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
   React.useEffect(() => {
-    const activeCategory: { c: string } = queryString.parse(location.search);
+    const activeCategory: { c: string } = queryString.parse(pathname.search);
 
     // if there is no query string, than don't dispatch anything
     // and keep the default state
     if ('c' in activeCategory) {
       setActiveCategories(dispatch)(activeCategory.c);
     }
-  }, [location.search]);
+  }, [pathname]);
 
   return (
     <Switch>

@@ -6,7 +6,7 @@ import {
 import { SET_ACTIVE_CATEGORIES } from './actions';
 
 const intialState = {
-  activeCategories: [],
+  activeCategories: '',
 };
 
 export const reducer = (state = intialState, action) => {

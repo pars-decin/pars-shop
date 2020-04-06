@@ -1,0 +1,163 @@
+.topbar {
+  display: flex;
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navbarHeight;
+  justify-content: space-between;
+  background-color: $white;
+  align-items: center;
+  border-bottom: 1px solid $red;
+  &__brand {
+    margin-left: 40px;
+    img {
+      height: 50px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+    &:hover {
+      color: $red;
+    }
+    &.active {
+      color: $red;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-size: 1.6rem;
+
+    &__nav-page {
+      padding: 0 20px;
+    }
+
+    &__lang {
+      margin-left: 20px;
+      position: relative;
+      left: -1px;
+      border-left: 1px solid $red;
+      button {
+        width: $navbarHeight;
+        height: $navbarHeight;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+      }
+      &__dropdown {
+        position: absolute;
+        top: 100%;
+        border-left: 1px solid $red;
+        border-bottom: 1px solid $red;
+        width: calc(100% + 2px);
+        left: -1px;
+        background-color: $white;
+        display: none;
+        &.show {
+          display: block;
+        }
+        &__item {
+          width: $navbarHeight;
+          height: $navbarHeight;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:first-child {
+            border-bottom: 1px solid $red;
+          }
+        }
+      }
+    }
+  }
+  .hamburger {
+    display: none;
+  }
+  @include portrait-tablet {
+    height: $navbarHeight / 3 * 4;
+
+    .hamburger {
+      display: flex;
+      align-items: center;
+      padding-right: 40px;
+      .demand-badge {
+        background-color: $red;
+        position: relative;
+        color: $white;
+      }
+      &.is-active {
+        .demand-badge {
+          background-color: $white;
+          color: $red;
+        }
+      }
+    }
+    &__brand {
+      position: relative;
+      z-index: 1;
+    }
+    &__nav {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100vw;
+      background-color: $red;
+      height: 100vh;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      a {
+        font-size: 2.8rem;
+        color: $white;
+        line-height: 1.3em;
+        margin-bottom: 20px;
+        font-weight: 700;
+        padding: 0;
+        &.active {
+          color: $white;
+          border-bottom: 1px solid $white;
+        }
+        &:hover {
+          color: $white;
+          opacity: 0.7;
+        }
+      }
+      &__lang {
+        margin-left: 0;
+        margin-top: 30px;
+        display: flex;
+        button,
+        a {
+          background-color: transparent;
+          color: $white;
+          font-size: 1.6rem;
+          font-weight: 700;
+        }
+        button {
+          flex-shrink: 0;
+        }
+        a {
+          font-weight: 400;
+        }
+        &__dropdown {
+          display: flex;
+          position: static;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  @include phone {
+    &__brand {
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
