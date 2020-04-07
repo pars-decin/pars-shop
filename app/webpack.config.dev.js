@@ -51,7 +51,7 @@ module.exports = merge(base, {
       template: path.join(__dirname, 'public', 'index.html'),
       // favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
     }),
-    new dotenv()
+    new dotenv(),
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
