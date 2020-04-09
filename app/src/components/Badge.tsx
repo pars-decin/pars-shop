@@ -3,13 +3,14 @@ import React, { ReactText } from 'react';
 interface Props {
   type: `info` | `warn`;
   children: ReactText;
+  className?: string;
 }
 
-const Badge: React.FC<Props> = ({ type, children }) => {
+const Badge: React.FC<Props> = ({ type, children, className = '' }) => {
   const [showBadge, toggleBadge] = React.useState(false);
   return (
     <span
-      className={`badge`}
+      className={`badge ${className}`}
       onMouseEnter={() => toggleBadge(true)}
       onMouseLeave={() => toggleBadge(false)}
     >

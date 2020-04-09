@@ -28,7 +28,7 @@ const Home: React.FC<Props> = () => {
               i === 1 ? `home-view__hero__main-category--right` : ``
             }`}
           >
-            <h3>Produkty podle materiálu</h3>
+            {/* <h3>Produkty podle materiálu</h3> */}
             <h1>{name}</h1>
             <Button
               className={`btn--primary`}

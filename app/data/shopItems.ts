@@ -6,7 +6,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -16,7 +17,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -26,7 +28,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -36,7 +39,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -46,7 +50,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -56,7 +61,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -66,7 +72,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -76,7 +83,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -86,7 +94,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -96,7 +105,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -106,7 +116,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -116,7 +127,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -126,7 +138,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -136,7 +149,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -146,7 +160,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -156,7 +171,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -166,7 +182,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -176,7 +193,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -186,7 +204,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -196,7 +215,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -206,7 +226,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -216,7 +237,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -226,7 +248,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -236,7 +259,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -246,7 +270,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -256,7 +281,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -266,7 +292,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -276,7 +303,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -286,7 +314,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -296,7 +325,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -306,7 +336,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -316,7 +347,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -326,7 +358,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -336,7 +369,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -346,7 +380,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -356,7 +391,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -366,7 +402,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -376,7 +413,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -386,7 +424,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -396,7 +435,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -406,7 +446,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -416,7 +457,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -426,7 +468,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -436,7 +479,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -446,7 +490,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -456,7 +501,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
   {
@@ -466,7 +512,8 @@ export default [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.',
     specification:
       'Materiál\nČSN 11 353\n\nDélky\n6 m, jiné délky dle dohody\n\nSlužby\nDělení materiálu a doprava\n\nPoznámka\nOstatní rozměry a jiné materiály na poptání',
-    coverPhoto: 'dummy_product.jpg',
+    geometryImg: 'dummy_product.jpg',
+    coverImg: 'product_dummy.jpg',
     imageNames: 'img.png\nimg2.png\nimg.png',
   },
 ];

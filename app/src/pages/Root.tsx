@@ -9,6 +9,7 @@ import Product from './Product';
 import Demand from './Demand';
 import Home from './Home';
 import Products from './Products';
+import Test from './Test';
 
 // types
 import { RouteComponentProps } from 'react-router-dom';
@@ -24,14 +25,13 @@ const Root: React.FC<RouteComponentProps> = ({ location }) => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   React.useEffect(() => {
     const activeCategory: { c: string } = queryString.parse(pathname.search);
 
     // if there is no query string, than don't dispatch anything
     // and keep the default state
-    if ('c' in activeCategory) {
-      setActiveCategories(dispatch)(activeCategory.c);
-    }
+    'c' in activeCategory && setActiveCategories(dispatch)(activeCategory.c);
   }, [pathname]);
 
   return (
@@ -39,6 +39,7 @@ const Root: React.FC<RouteComponentProps> = ({ location }) => {
       <Route exact path={`/`} component={Home} />
       <Route exact path={`/demand`} component={Demand} />
       <Route exact path={`/products`} component={Products} />
+      <Route exact path={`/test`} component={Test} />
       <Route path={`/product/:uid`} component={Product} />
     </Switch>
   );

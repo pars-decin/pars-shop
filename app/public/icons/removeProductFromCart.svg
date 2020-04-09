@@ -1,11 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41">
-  <g id="Group_280" data-name="Group 280" transform="translate(-502 -297)">
-    <circle id="Ellipse_19" data-name="Ellipse 19" cx="20.5" cy="20.5" r="20.5" transform="translate(502 297)" fill="#f2182a"/>
-    <g id="Group_72" data-name="Group 72" transform="translate(515.735 309.04)">
-      <path id="Path_245" data-name="Path 245" d="M25,35.5V46.937H35.359V35.5H34.116V45.693H26.243V35.5Z" transform="translate(-23.011 -30.072)" fill="#fff"/>
-      <path id="Path_246" data-name="Path 246" d="M15.4,12.739H29.737V11.5H25.324V9.3H19.813v2.2H15.4Zm5.656-2.2h3.025V11.5H21.056Z" transform="translate(-15.4 -9.3)" fill="#fff"/>
-      <rect id="Rectangle_69" data-name="Rectangle 69" width="1.243" height="8.339" transform="translate(4.89 5.428)" fill="#fff"/>
-      <rect id="Rectangle_70" data-name="Rectangle 70" width="1.243" height="8.339" transform="translate(8.204 5.428)" fill="#fff"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="14.142" height="14.142" viewBox="0 0 14.142 14.142">
+  <g id="Group_280" data-name="Group 280" transform="translate(171.12 -745.998) rotate(45)">
+    <line id="Line_291" data-name="Line 291" y2="16" transform="translate(416.5 640.5)" fill="none" stroke="#f2182a" stroke-linecap="round" stroke-width="2"/>
+    <line id="Line_292" data-name="Line 292" y2="16" transform="translate(424.5 648.5) rotate(90)" fill="none" stroke="#f2182a" stroke-linecap="round" stroke-width="2"/>
   </g>
 </svg>

@@ -16,7 +16,14 @@ const ProductDetail: React.FC<Props> = ({ uid }) => {
 
   const shopItem = shopItems.find(({ shopItemId }) => shopItemId === uid);
 
-  const { name, description, specification, coverPhoto, imageNames } = shopItem;
+  const {
+    name,
+    description,
+    specification,
+    geometryImg,
+    imageNames,
+    coverImg,
+  } = shopItem;
 
   return (
     <div className={`product-detail`}>
@@ -26,6 +33,9 @@ const ProductDetail: React.FC<Props> = ({ uid }) => {
           perex={description}
           specification={specification}
         />
+        <div className={`product-detail__cover`}>
+          <Img src={`/img/products/${coverImg}`} />
+        </div>
         <h2>Varianty</h2>
         <ProductVariants variantsId={uid} />
         {imageNames.length !== 0 && (
@@ -35,8 +45,8 @@ const ProductDetail: React.FC<Props> = ({ uid }) => {
           </>
         )}
       </div>
-      <div className={`product-detail__cover`}>
-        <Img src={`/img/products/${coverPhoto}`} />
+      <div className={`product-detail__geometry`}>
+        <Img src={`/img/products/${geometryImg}`} />
       </div>
     </div>
   );

@@ -1,0 +1,34 @@
+.sidebar-search {
+  .text-input {
+    border: 0;
+    align-items: center;
+    img {
+      width: auto;
+      height: auto;
+      margin-left: 35px;
+    }
+    label {
+      visibility: hidden;
+    }
+    input {
+      padding-top: 0;
+      font-size: 1.6rem;
+    }
+  }
+  @include portrait-tablet {
+    // padding-left: 0;
+    margin-bottom: 30px;
+    .text-input {
+      border: 1px solid $red-400;
+      width: calc(100%);
+    }
+  }
+  @include phone {
+    .text-input {
+      input {
+        height: 70px;
+      }
+    }
+  }
+}
+// tase of wild & super premiovky

@@ -1,5 +1,5 @@
 .variants {
-  border-bottom: 1px solid $red;
+  border-bottom: 1px solid $red-400;
   margin-top: -1px;
   &__body {
     &__row {
@@ -8,8 +8,8 @@
       cursor: pointer;
       &:hover {
         background-color: $light-gray;
-        border-bottom: 1px solid $red;
-        border-top: 1px solid $red;
+        border-bottom: 1px solid $red-400;
+        border-top: 1px solid $red-400;
         // prevents row from growing by 2px from borders
         margin: -1px 0;
       }
@@ -22,7 +22,7 @@
           display: none;
         }
         &:not(:last-child) {
-          border-right: 1px solid $red;
+          border-right: 1px solid $red-400;
         }
       }
       .btn--invisible {
@@ -39,10 +39,10 @@
     &__item {
       width: 100%;
       padding: 10px 0px 10px 20px;
-      border-top: 1px solid $red;
-      border-bottom: 1px solid $red;
+      border-top: 1px solid $red-400;
+      border-bottom: 1px solid $red-400;
       background-color: $light-gray;
-      color: $red;
+      color: $red-400;
       font-size: 1.4rem;
       letter-spacing: 0.05em;
       &:last-child {
@@ -66,8 +66,8 @@
     }
   }
   @include phone {
-    border-right: 1px solid $red;
-    border-left: 1px solid $red;
+    border-right: 1px solid $red-400;
+    border-left: 1px solid $red-400;
     &__head {
       &__item {
         padding-left: 30px;
@@ -90,8 +90,8 @@
         }
         &__dropdown {
           flex-basis: 100%;
-          border-top: 1px solid $red;
-          border-bottom: 1px solid $red;
+          border-top: 1px solid $red-400;
+          border-bottom: 1px solid $red-400;
           background-color: $light-gray;
           p {
             padding: 10px 0 10px 47px;
@@ -136,7 +136,7 @@
           }
         }
         .btn--invisible {
-          border-left: 1px solid $red;
+          border-left: 1px solid $red-400;
           margin-right: 0;
         }
       }

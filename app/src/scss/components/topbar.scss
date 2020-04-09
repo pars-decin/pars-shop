@@ -9,7 +9,7 @@
   justify-content: space-between;
   background-color: $white;
   align-items: center;
-  border-bottom: 1px solid $red;
+  border-bottom: 1px solid $red-400;
   &__brand {
     margin-left: 40px;
     img {
@@ -21,10 +21,10 @@
     text-decoration: none;
     color: $black;
     &:hover {
-      color: $red;
+      color: $red-400;
     }
     &.active {
-      color: $red;
+      color: $red-400;
     }
   }
 
@@ -42,7 +42,7 @@
       margin-left: 20px;
       position: relative;
       left: -1px;
-      border-left: 1px solid $red;
+      border-left: 1px solid $red-400;
       button {
         width: $navbarHeight;
         height: $navbarHeight;
@@ -54,8 +54,8 @@
       &__dropdown {
         position: absolute;
         top: 100%;
-        border-left: 1px solid $red;
-        border-bottom: 1px solid $red;
+        border-left: 1px solid $red-400;
+        border-bottom: 1px solid $red-400;
         width: calc(100% + 2px);
         left: -1px;
         background-color: $white;
@@ -70,7 +70,7 @@
           align-items: center;
           justify-content: center;
           &:first-child {
-            border-bottom: 1px solid $red;
+            border-bottom: 1px solid $red-400;
           }
         }
       }
@@ -87,14 +87,14 @@
       align-items: center;
       padding-right: 40px;
       .demand-badge {
-        background-color: $red;
+        background-color: $red-400;
         position: relative;
         color: $white;
       }
       &.is-active {
         .demand-badge {
           background-color: $white;
-          color: $red;
+          color: $red-400;
         }
       }
     }
@@ -115,7 +115,7 @@
       left: 0;
       position: absolute;
       width: 100vw;
-      background-color: $red;
+      background-color: $red-400;
       height: 100vh;
       display: none;
       flex-direction: column;

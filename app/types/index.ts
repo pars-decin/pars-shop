@@ -19,7 +19,8 @@ export type ShopItem = {
   name: string;
   description: string;
   specification: string;
-  coverPhoto: string;
+  geometryImg: string;
+  coverImg: string;
   imageNames: Array<string>;
 };
 
@@ -28,8 +29,9 @@ export type RawShopItem = {
   name: string;
   description: string;
   specification: string;
-  coverPhoto: string;
   imageNames: string;
+  geometryImg: string;
+  coverImg: string;
 };
 
 // FIX ME: for dev purposes only

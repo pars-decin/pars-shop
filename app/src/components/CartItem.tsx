@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import TextInput, { Props as TextInputProps } from './TextInput';
 import Badge from './Badge';
+import Img from './Img';
 
 interface Props {
   header: string;
@@ -24,6 +25,12 @@ const CartItem: React.FC<Props> = ({
       <div className={`cart-item__col cart-item__col__name`}>
         {index === 0 && <div className={`cart-item__col__header`}>Produkt</div>}
         <div className={`cart-item__col__name__content`}>
+          <span
+            className={`cart-item__col__name__content__remove`}
+            onClick={() => removeItem(shopItemId)}
+          >
+            <Img src={`/icons/removeProductFromCart.svg`} />
+          </span>
           <h3>{header}</h3>
           <p>{perex}</p>
         </div>
@@ -38,7 +45,9 @@ const CartItem: React.FC<Props> = ({
             <div className={`cart-item__col__header`}>
               {textInput.label}
               {textInput.badgeMessage && (
-                <Badge type={`info`}>{textInput.badgeMessage}</Badge>
+                <Badge type={`info`} className={`white`}>
+                  {textInput.badgeMessage}
+                </Badge>
               )}
             </div>
           )}
@@ -47,13 +56,13 @@ const CartItem: React.FC<Props> = ({
           </div>
         </div>
       ))}
-      <div className={`cart-item__col cart-item__col__remove`}>
+      {/* <div className={`cart-item__col cart-item__col__remove`}>
         {index === 0 && <div className={`cart-item__col__header`}>Odebrat</div>}
         <div
           className={`cart-item__col__remove__content`}
           onClick={() => removeItem(shopItemId)}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

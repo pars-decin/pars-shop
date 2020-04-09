@@ -6,7 +6,7 @@ import SidebarItem from './SidebarItem';
 import SidebarList from './SidebarList';
 
 import { LocationProvider } from '../hocs/withLocation';
-const queryString = require('query-string');
+import queryString from 'query-string';
 
 const variants = {
   expanded: {

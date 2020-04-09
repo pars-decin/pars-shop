@@ -45,10 +45,11 @@ function Cart({}: Props): ReactElement {
               textInputs={[
                 {
                   id: 'dimensions',
-                  label: 'Rozměr [mm]',
+                  label: 'Délka [mm]',
                   name: 'dimensions',
                   badgeMessage: 'Lorem ipsum dolor sit amet',
                   intialValue: 3,
+                  counterIncrement: 1,
                   // @ts-ignore
                   validate: (value) => !/^[0-9]/i.test(value) && value < 0,
                   withCounter: true,

@@ -15,9 +15,22 @@ interface Props {
 
 const Products: React.FC<Props> = ({ shopItems }) => {
   const initialItemsIndex = 1;
+  const itemsPerPage = 24;
   const [filteredShopItems, filterShopItems] = React.useState([]);
   const [itemsIndex, setItemsIndex] = React.useState(initialItemsIndex);
   const activeCategory = useSelector((state) => state.activeCategories);
+  const searchQuery = useSelector((state) => state.searchQuery);
+
+  React.useEffect(() => {
+    const searchRegex = new RegExp(searchQuery, 'gi');
+    const test = (string) => searchRegex.test(string);
+
+    filterShopItems(
+      shopItems.filter(({ name, description, specification }) => {
+        return test(name) || test(description) || test(specification);
+      })
+    );
+  }, [searchQuery]);
 
   React.useEffect(() => {
     filterShopItems(
@@ -31,6 +44,16 @@ const Products: React.FC<Props> = ({ shopItems }) => {
     setItemsIndex(initialItemsIndex);
   }, [activeCategory]);
 
+  if (filteredShopItems.length === 0) {
+    return (
+      <div className={`products-grid__empty-list`}>
+        <h2>
+          Nenašli jsme žádné položky obsahující: <span>{searchQuery}</span>
+        </h2>
+      </div>
+    );
+  }
+
   return (
     <AnimatePresence key={activeCategory}>
       <motion.div
@@ -40,17 +63,17 @@ const Products: React.FC<Props> = ({ shopItems }) => {
         exit={{ opacity: 0 }}
       >
         {filteredShopItems
-          .slice(0, itemsIndex * 6)
-          .map(({ shopItemId, name, coverPhoto, description }) => (
+          .slice(0, itemsIndex * itemsPerPage)
+          .map(({ shopItemId, name, geometryImg, description }) => (
             <ProductsGridItem
               key={shopItemId}
               shopItemId={shopItemId}
               name={name}
               description={description}
-              coverPhoto={coverPhoto}
+              geometryImg={geometryImg}
             />
           ))}
-        {itemsIndex * 6 < filteredShopItems.length && (
+        {itemsIndex * itemsPerPage < filteredShopItems.length && (
           <div className={`products-grid__load-more`}>
             <Button
               className={`btn--primary`}

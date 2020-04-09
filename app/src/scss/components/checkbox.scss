@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   padding: 20px;
-  border: 1px solid $red;
+  border: 1px solid $red-400;
   $side: 20px;
   $offset: 4px;
   label {
@@ -20,13 +20,13 @@
       position: absolute;
       top: 0;
       left: 0;
-      border: 1px solid $red;
+      border: 1px solid $red-400;
       background-color: $white;
     }
     &:after {
       content: '';
       display: none;
-      background-color: $red;
+      background-color: $red-400;
       width: $side - $offset * 2;
       height: $side - $offset * 2;
       position: absolute;

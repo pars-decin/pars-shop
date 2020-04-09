@@ -7,31 +7,31 @@
   letter-spacing: 0.08em;
   font-weight: 600;
   &--primary {
-    background-color: $red;
-    border-color: $red;
+    background-color: $red-400;
+    border-color: $red-400;
     color: $white;
     &:hover {
       background-color: $red-hover;
     }
   }
   &--secondary {
-    border-color: $red;
-    color: $red;
+    border-color: $red-400;
+    color: $red-400;
     &:hover {
-      background-color: $red;
+      background-color: $red-400;
       color: $white;
     }
   }
   &--invisible {
     border: 0px solid transparent;
-    color: $red;
+    color: $red-400;
     &:hover {
-      background-color: $red;
+      background-color: $red-400;
       color: $white;
     }
   }
   &--disabled {
-    background-color: $red;
+    background-color: $red-400;
     background-image: url('#{$prefix}/icons/tick.svg');
     background-repeat: no-repeat;
     background-position: center;

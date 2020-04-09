@@ -5,4 +5,5 @@ export default {
   detail: 'DETAIL',
   order: 'POPTAT',
   optional: 'nepovinné',
+  searchLabel: 'Hledat',
 };
