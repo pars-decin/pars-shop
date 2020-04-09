@@ -1,5 +1,5 @@
 .products-cover {
-  border-bottom: 1px solid $red;
+  border-bottom: 1px solid $red-400;
   img {
     // height: 100%;
     height: cols(3);
@@ -11,6 +11,7 @@
     }
   }
   @include portrait-tablet {
+    margin-top: 30px;
     border-bottom: 0;
   }
   @include phone {

@@ -17,6 +17,7 @@ export interface Props {
   validate?: (value: string) => boolean;
   intialValue?: string | number;
   withCounter?: boolean;
+  counterIncrement?: number;
   errorMsg?: string;
 }
 
@@ -32,6 +33,7 @@ const TextInput: React.FC<Props> = ({
   intialValue = '',
   withCounter = false,
   errorMsg,
+  counterIncrement = 10,
 }) => {
   const [data, setData] = React.useState({
     value: intialValue,
@@ -53,17 +55,17 @@ const TextInput: React.FC<Props> = ({
   };
 
   const handleCounter = (type: 'inc' | 'dec') => {
-    const increment = 10;
+    // const counterIncrement = 10;
     setData(({ hasError, value }) => {
       const newValue =
         // prettier-ignore
         type === 'dec'
           ? (
             // @ts-ignore
-            parseInt(value) - increment
+            parseInt(value) - counterIncrement
           ) : (
             // @ts-ignore
-            parseInt(value) + increment
+            parseInt(value) + counterIncrement
           );
       return {
         hasError: validate(newValue),

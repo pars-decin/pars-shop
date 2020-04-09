@@ -33,7 +33,7 @@ const SidebarItem: React.FC<Props> = ({
       className={`sidebar__item ${isActive ? `active` : ``} ${className}`}
       onClick={handleClick}
       variants={{
-        collapsed: { x: -25, opacity: 0, ...transition },
+        collapsed: { x: -0, opacity: 1, ...transition },
         expanded: { x: 0, opacity: 1, ...transition },
       }}
     >

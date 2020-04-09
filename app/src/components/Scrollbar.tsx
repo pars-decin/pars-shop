@@ -2,16 +2,16 @@ import React, { Children } from 'react';
 import Scrollbars from 'react-scrollbars-custom';
 
 interface Props {
-  styles: any;
+  styles?: any;
   children: React.ReactNode | Array<React.ReactNode>;
 }
 
-const Scrollbar: React.FC<Props> = ({ styles, children }) => {
+const Scrollbar: React.FC<Props> = ({ styles = {}, children }) => {
   return (
     <Scrollbars
       style={styles as any}
       trackYProps={{
-        renderer: props => {
+        renderer: (props) => {
           const { elementRef, style, ...restProps } = props;
           return (
             <div
@@ -20,23 +20,37 @@ const Scrollbar: React.FC<Props> = ({ styles, children }) => {
               className='trackY'
               style={{
                 ...style,
-                width: 5,
                 backgroundColor: 'transparent',
-                right: -3,
+                right: 4,
+                width: 4,
               }}
             />
           );
         },
       }}
       thumbYProps={{
-        renderer: props => {
+        renderer: (props) => {
           const { elementRef, style, ...restProps } = props;
           return (
             <div
               {...restProps}
               ref={elementRef}
               className='thumbY'
-              style={{ ...style, backgroundColor: `#f2182a` }}
+              style={{ ...style, backgroundColor: `#171e26`, opacity: 0.2 }}
+            />
+          );
+        },
+      }}
+      wrapperProps={{
+        renderer: (props) => {
+          const { elementRef, style, ...restProps } = props;
+
+          return (
+            <div
+              {...restProps}
+              ref={elementRef}
+              className='thumbY'
+              style={{ ...style, right: 0 }}
             />
           );
         },

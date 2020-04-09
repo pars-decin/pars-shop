@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-  <circle id="Ellipse_22" data-name="Ellipse 22" cx="10" cy="10" r="10" fill="#f2182a"/>
+  <circle id="Ellipse_22" data-name="Ellipse 22" cx="10" cy="10" r="10" fill="#fafafa"/>
   <g id="Group_281" data-name="Group 281" transform="translate(6 6)">
-    <path id="Path_511" data-name="Path 511" d="M0,0V8" transform="translate(8 4) rotate(90)" fill="none" stroke="#fafafa" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_511" data-name="Path 511" d="M0,0V8" transform="translate(8 4) rotate(90)" fill="none" stroke="#f2182a" stroke-linecap="round" stroke-width="2"/>
   </g>
 </svg>

@@ -19,7 +19,7 @@ import { CategoriesTree, Category } from '../../types';
 interface Props {}
 
 const Products: React.FC<Props> = () => {
-  const { activeCategories } = useSelector((state) => state);
+  const { activeCategories, searchQuery } = useSelector((state) => state);
   const { shopItems, categoriesTree } = React.useContext(DataProvider);
   const [currentCategory, setCurrentCategory] = React.useState<
     CategoriesTree
@@ -53,8 +53,12 @@ const Products: React.FC<Props> = () => {
       <View className={`products-view with-sidebar`}>
         <Sidebar scrollToRef={productsRef} />
         <div ref={productsRef} className={`products`}>
-          <ProductsCover src={currentCategory?.coverImg} />
-          <ProductsLabel label={currentCategory?.name} />
+          {currentCategory?.coverImg && (
+            <ProductsCover src={currentCategory?.coverImg} />
+          )}
+          {currentCategory?.name && (
+            <ProductsLabel label={currentCategory?.name} />
+          )}
           <ProductsGrid shopItems={shopItems} />
         </div>
       </View>

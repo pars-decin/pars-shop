@@ -24,7 +24,7 @@ const ProductDetailVariantsBody: React.FC<Props> = ({
             rowHeight * rowsCount >= 400
               ? (window.innerHeight / 15) * 5
               : rowHeight * rowsCount,
-          minHeight: 300,
+          // minHeight: 300,
         }}
       >
         {rowsData.map((rowData, i) => (

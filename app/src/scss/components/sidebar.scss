@@ -1,10 +1,12 @@
 .sidebar {
   width: cols(4);
   min-width: 300px;
-  max-width: 400px;
+  max-width: 500px;
+  height: calc(100vh - #{$navbarHeight});
   overflow-y: auto;
   position: sticky;
-  border-right: 1px solid $red;
+  border-right: 1px solid $red-400;
+  // color: $white;
   top: $navbarHeight;
   &__toggler {
     display: none;
@@ -18,15 +20,23 @@
     width: 100%;
     min-width: initial;
     max-width: initial;
+    height: auto;
+    overflow-y: unset;
+    // margin-left: 60px;
     background-color: $white;
     border-right: 0;
+    // width: calc(100% + 90px);
+    // left: 30px;
+
     &__toggler {
       display: flex;
       cursor: pointer;
       align-items: center;
       padding: 30px;
+      padding-left: 0;
       &.show {
         margin-bottom: 0;
+        padding-left: 0;
       }
       img {
         width: 22px;

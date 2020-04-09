@@ -17,7 +17,7 @@ function TextInputCounter({ dec, inc }: Props): ReactElement {
       </div>
       <div
         className={`text-input__counter__item minus`}
-        onClick={(type) => dec(type)}
+        onMouseDown={(type) => dec(type)}
       >
         <Img src={`/icons/textInputMinus.svg`} />
       </div>

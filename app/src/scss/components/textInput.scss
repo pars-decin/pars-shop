@@ -1,12 +1,12 @@
 .text-input {
   position: relative;
-  border: 1px solid $red;
+  border: 1px solid $red-400;
   width: 100%;
   display: flex;
   &__error {
     display: inline-block;
     margin-left: 10px;
-    background-color: $red;
+    background-color: $red-400;
     color: $white;
     padding: 0px 10px;
     vertical-align: middle;
@@ -19,15 +19,16 @@
   &__counter {
     width: $input-height / 2;
     flex-shrink: 0;
-    border-left: 1px solid $red;
+    border-left: 1px solid $red-400;
     &__item {
       display: flex;
       justify-content: center;
       align-items: center;
       height: $input-height / 2;
+      background-color: $light-gray;
       cursor: pointer;
       &:first-child {
-        border-bottom: 1px solid $red;
+        border-bottom: 1px solid $red-400;
       }
       &.plus img {
         width: 20px * 0.8;
@@ -42,7 +43,7 @@
   }
 
   &.error {
-    color: $red;
+    color: $red-400;
   }
 
   label {
@@ -52,7 +53,7 @@
     }
 
     position: absolute;
-    color: $red;
+    color: $red-400;
     top: 10px;
     left: 20px;
   }

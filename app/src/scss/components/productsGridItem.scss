@@ -3,8 +3,8 @@
   height: 300px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid $red;
-  border-right: 1px solid $red;
+  border-bottom: 1px solid $red-400;
+  border-right: 1px solid $red-400;
   &__content {
     padding: 40px 30px;
     h2 {
@@ -33,7 +33,7 @@
     }
   }
   @include portrait-tablet {
-    border-left: 1px solid $red;
+    border-left: 1px solid $red-400;
   }
   @include phone {
     flex-direction: column;

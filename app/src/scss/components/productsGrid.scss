@@ -3,10 +3,32 @@
   flex-wrap: wrap;
   margin-right: -1px;
   align-items: flex-start;
+  &__empty-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - #{$navbarHeight});
+    padding-left: cols(0.5);
+    // padding: cols(0.5) 0;
+    h2 {
+      span {
+        color: $red-400;
+        font-size: inherit;
+        letter-spacing: inherit;
+      }
+    }
+  }
   &__load-more {
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 30px 0;
+  }
+  @include portrait-tablet {
+    &__empty-list {
+      align-items: flex-start;
+      padding: 100px 0;
+      height: auto;
+    }
   }
 }

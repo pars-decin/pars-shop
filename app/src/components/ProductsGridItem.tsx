@@ -8,7 +8,7 @@ import { DataProvider } from '../hocs/dataContext';
 import { LocationProvider } from '../hocs/withLocation';
 
 const ProductsGridItem: React.FC<Partial<ShopItem>> = ({
-  coverPhoto,
+  geometryImg,
   description,
   name,
   shopItemId,
@@ -18,7 +18,7 @@ const ProductsGridItem: React.FC<Partial<ShopItem>> = ({
   return (
     <div className={`products-grid-item`}>
       <div className={`products-grid-item__intro`}>
-        <Img src={`/img/products/${coverPhoto}`} />
+        <Img src={`/img/products/${geometryImg}`} />
       </div>
       <div className={`products-grid-item__content`}>
         <h2>{name}</h2>
