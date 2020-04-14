@@ -1,0 +1,19 @@
+.counter {
+  border-right: 1px solid $red-400;
+  border-bottom: 1px solid $red-400;
+  width: 50px;
+  flex-shrink: 0;
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    &:first-child {
+      border-bottom: 1px solid $red-400;
+    }
+    img {
+      width: 15px;
+      height: auto;
+    }
+  }
+}

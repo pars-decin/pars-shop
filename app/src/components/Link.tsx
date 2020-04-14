@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, AnchorHTMLAttributes } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 interface Props {

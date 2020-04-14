@@ -1,5 +1,13 @@
 .form {
   appearance: none;
+  button {
+    margin-top: 30px;
+    // margin-left: auto;
+    float: right;
+  }
+  h2 {
+    margin-bottom: 30px;
+  }
   // margin: 50px 0;
   .form-group {
     display: flex;
@@ -28,7 +36,7 @@
     }
   }
 
-  @include phone {
+  @include landscape-tablet {
     .form-group {
       .form-item {
         &.half {

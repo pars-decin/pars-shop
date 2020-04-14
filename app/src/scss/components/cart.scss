@@ -2,4 +2,17 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 60px;
+  &__header {
+    background-color: $red-400;
+    padding: 10px 20px;
+    &__item {
+      color: $white;
+    }
+  }
+  @include phone {
+    &__header {
+      display: none;
+    }
+  }
 }

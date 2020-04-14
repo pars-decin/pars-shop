@@ -2,27 +2,21 @@ import React, { ReactElement } from 'react';
 import Img from './Img';
 
 interface Props {
-  inc: (x) => void;
-  dec: (x) => void;
+  handleValue: () => void;
+  inc: number;
 }
 
-function TextInputCounter({ dec, inc }: Props): ReactElement {
+const TextInputCounter = ({ handleValue, inc }) => {
   return (
-    <div className={`text-input__counter`}>
-      <div
-        className={`text-input__counter__item plus`}
-        onClick={(type) => inc(type)}
-      >
+    <div className={`counter`}>
+      <div onClick={handleValue(inc)}>
         <Img src={`/icons/textInputPlus.svg`} />
       </div>
-      <div
-        className={`text-input__counter__item minus`}
-        onMouseDown={(type) => dec(type)}
-      >
+      <div onClick={handleValue(inc * -1)}>
         <Img src={`/icons/textInputMinus.svg`} />
       </div>
     </div>
   );
-}
+};
 
 export default TextInputCounter;

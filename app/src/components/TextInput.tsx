@@ -1,121 +1,43 @@
 import React, { ReactElement } from 'react';
 
 import Badge from '../components/Badge';
-import TextInputCounter from '../components/TextInputCounter';
-import TextInputError from './TextInputError';
-
-import strings from '../../helpers/strings';
+import { useField } from 'formik';
 
 export interface Props {
-  label: ReactElement | string;
-  id: string;
-  name: string;
-  badgeMessage?: string;
-  isOptional?: boolean;
+  required?: boolean;
   multiline?: boolean;
-  className?: string;
-  validate?: (value: string) => boolean;
-  intialValue?: string | number;
-  withCounter?: boolean;
-  counterIncrement?: number;
-  errorMsg?: string;
+  name: string;
+  label: string;
+  hint?: string;
+  value: string;
 }
 
-const TextInput: React.FC<Props> = ({
-  label,
-  id,
-  name,
+function TextInput({
+  required = true,
   multiline = false,
-  badgeMessage = '',
-  isOptional = false,
-  validate = () => false,
-  className = '',
-  intialValue = '',
-  withCounter = false,
-  errorMsg,
-  counterIncrement = 10,
-}) => {
-  const [data, setData] = React.useState({
-    value: intialValue,
-    hasError: false,
-  });
-
-  const handleChange = (e) => {
-    setData({
-      value: e.target.value,
-      hasError: false,
-    });
-  };
-
-  const handleBlur = (e) => {
-    setData({
-      value: e.target.value,
-      hasError: validate(e.target.value),
-    });
-  };
-
-  const handleCounter = (type: 'inc' | 'dec') => {
-    // const counterIncrement = 10;
-    setData(({ hasError, value }) => {
-      const newValue =
-        // prettier-ignore
-        type === 'dec'
-          ? (
-            // @ts-ignore
-            parseInt(value) - counterIncrement
-          ) : (
-            // @ts-ignore
-            parseInt(value) + counterIncrement
-          );
-      return {
-        hasError: validate(newValue),
-        value: newValue <= 0 ? 0 : newValue,
-      };
-    });
-  };
+  hint,
+  label,
+  ...props
+}: Props) {
+  const [field, meta] = useField(props.name);
+  const hasError = meta.error && meta.touched;
 
   return (
-    <div className={`text-input ${data.hasError ? `error` : ``} ${className}`}>
-      <label htmlFor={id}>
-        {label}
-        {isOptional && (
-          <span className={`is-optional`}>{`\u00a0(${strings.optional})`}</span>
-        )}
-        {data.hasError && <TextInputError errorMsg={errorMsg} />}
-        {badgeMessage.length !== 0 && (
-          <Badge type={'info'}>{badgeMessage}</Badge>
+    <div className={`text-input ${hasError ? `error` : ``}`}>
+      <label htmlFor={props.name}>
+        <span className={`text-input__label`}>{label}</span>
+        {!!hint && <Badge type={`info`}>{hint}</Badge>}
+        {hasError && (
+          <div className={`text-input__error-msg`}>{meta.error}</div>
         )}
       </label>
       {multiline ? (
-        <textarea
-          id={id}
-          name={name}
-          required={!isOptional}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          value={data.value}
-        />
+        <textarea required={required} {...props} />
       ) : (
-        <>
-          <input
-            type='text'
-            id={id}
-            name={name}
-            onChange={handleChange}
-            required={!isOptional}
-            onBlur={handleBlur}
-            value={data.value}
-          />
-          {withCounter && (
-            <TextInputCounter
-              dec={() => handleCounter('dec')}
-              inc={() => handleCounter('inc')}
-            />
-          )}
-        </>
+        <input required={required} {...props} />
       )}
     </div>
   );
-};
+}
 
 export default TextInput;

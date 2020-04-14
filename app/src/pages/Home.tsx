@@ -4,6 +4,7 @@ import shortHash from 'short-hash';
 import Sidebar from '../components/Sidebar';
 import Button from '../components/Button';
 import View from '../components/View';
+import Img from '../components/Img';
 
 import consts from '../../helpers/strings';
 
@@ -24,11 +25,9 @@ const Home: React.FC<Props> = () => {
         {categoriesTree.map(({ name, id }, i) => (
           <div
             key={id}
-            className={`home-view__hero__main-category ${
-              i === 1 ? `home-view__hero__main-category--right` : ``
-            }`}
+            onClick={() => history.push(`/products?=${id}`)}
+            className={`home-view__hero__category`}
           >
-            {/* <h3>Produkty podle materiálu</h3> */}
             <h1>{name}</h1>
             <Button
               className={`btn--primary`}
@@ -36,6 +35,9 @@ const Home: React.FC<Props> = () => {
             >
               {consts.detail}
             </Button>
+            <div className={`home-view__hero__category__img-wrap`}>
+              <Img src={`/img/others/homeHero${i}.jpg`} />
+            </div>
           </div>
         ))}
       </div>
