@@ -39,10 +39,10 @@
     &__item {
       width: 100%;
       padding: 10px 0px 10px 20px;
-      border-top: 1px solid $red-400;
-      border-bottom: 1px solid $red-400;
-      background-color: $light-gray;
-      color: $red-400;
+      // border-top: 1px solid $red-400;
+      // border-bottom: 1px solid $red-400;
+      background-color: $red-400;
+      color: $white;
       font-size: 1.4rem;
       letter-spacing: 0.05em;
       &:last-child {

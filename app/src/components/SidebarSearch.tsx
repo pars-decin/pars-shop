@@ -7,6 +7,8 @@ import Img from './Img';
 import consts from '../../helpers/strings';
 import { setSearchQuery, setActiveCategories } from '../store/actions';
 import { LocationProvider } from '../hocs/withLocation';
+import { Form, Formik, Field } from 'formik';
+import TextInput from './TextInput';
 
 interface Props {}
 
@@ -15,28 +17,39 @@ function SidebarSearch({}: Props): ReactElement {
   const dispatch = useDispatch();
   const query = useSelector((x) => x.searchQuery);
 
-  const handleChange = (e) => {
-    setSearchQuery(dispatch)(e.target.value);
+  const handleChange = (values) => {
+    setSearchQuery(dispatch)(values.search);
     if (query.length >= 2) {
       setActiveCategories(dispatch)('');
-      history.push('/products');
     }
   };
 
   return (
     <div className={`sidebar-search`}>
-      <div className='text-input'>
-        <label htmlFor={`searchQuery`}>{consts.searchLabel}</label>
-        <Img src={`/icons/search.svg`} alt='' />
-        <input
-          type={`text`}
-          id={`searchQuery`}
-          name={`searchQuery`}
-          onChange={handleChange}
-          value={query}
-        />
-      </div>
+      <Formik initialValues={{ search: '' }} onSubmit={handleChange}>
+        {() => (
+          <Form>
+            <Field name={`search`} as={TextInput} label={``} />
+          </Form>
+        )}
+      </Formik>
     </div>
+    // <form
+    //   onSubmit={() => history.push('/products')}
+    //   className={`sidebar-search`}
+    // >
+    //   <div className='text-input'>
+    //     <label htmlFor={`searchQuery`}>{consts.searchLabel}</label>
+    //     <Img src={`/icons/search.svg`} alt='' />
+    //     <input
+    //       type={`text`}
+    //       id={`searchQuery`}
+    //       name={`searchQuery`}
+    //       onChange={handleChange}
+    //       value={query}
+    //     />
+    //   </div>
+    // </form>
   );
 }
 

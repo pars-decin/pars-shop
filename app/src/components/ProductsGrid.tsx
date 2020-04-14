@@ -22,17 +22,6 @@ const Products: React.FC<Props> = ({ shopItems }) => {
   const searchQuery = useSelector((state) => state.searchQuery);
 
   React.useEffect(() => {
-    const searchRegex = new RegExp(searchQuery, 'gi');
-    const test = (string) => searchRegex.test(string);
-
-    filterShopItems(
-      shopItems.filter(({ name, description, specification }) => {
-        return test(name) || test(description) || test(specification);
-      })
-    );
-  }, [searchQuery]);
-
-  React.useEffect(() => {
     filterShopItems(
       shopItems.filter((shopItem) =>
         shopItem.inCategories.find((category) =>
@@ -40,9 +29,19 @@ const Products: React.FC<Props> = ({ shopItems }) => {
         )
       )
     );
-
     setItemsIndex(initialItemsIndex);
   }, [activeCategory]);
+
+  React.useEffect(() => {
+    const searchRegex = new RegExp(searchQuery, 'gi');
+    const test = (string) => searchRegex.test(string);
+
+    filterShopItems(
+      shopItems.filter(({ name, description, specification, inCategories }) => {
+        return test(name) || test(description) || test(specification);
+      })
+    );
+  }, [searchQuery]);
 
   if (filteredShopItems.length === 0) {
     return (

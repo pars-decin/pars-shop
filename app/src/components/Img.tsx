@@ -7,14 +7,13 @@ interface Props {
   handleClick?: (event: React.MouseEvent<HTMLImageElement, MouseEvent>) => void;
 }
 
-const Img: React.FC<Props> = ({
-  src,
-  alt = 'alt',
-  handleClick,
-  className = '',
-}) => {
+const Img: React.FC<Props> = (
+  { src, alt = 'alt', handleClick, className = '' },
+  ref
+) => {
   return (
     <img
+      ref={ref}
       src={process.env.ASSET_PREFIX + src}
       alt={alt}
       onClick={handleClick}
@@ -23,4 +22,4 @@ const Img: React.FC<Props> = ({
   );
 };
 
-export default Img;
+export default React.forwardRef(Img);

@@ -1,14 +1,19 @@
 .sidebar-search {
   .text-input {
     border: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    margin-left: 40px;
     align-items: center;
-    img {
-      width: auto;
-      height: auto;
-      margin-left: 35px;
-    }
+    background-image: url('#{$prefix}/icons/search.svg');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: left center;
+    width: auto;
     label {
       visibility: hidden;
+      position: absolute;
     }
     input {
       padding-top: 0;
@@ -31,4 +36,3 @@
     }
   }
 }
-// tase of wild & super premiovky

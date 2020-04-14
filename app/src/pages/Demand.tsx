@@ -1,149 +1,92 @@
 import React from 'react';
+import { useCookies } from 'react-cookie';
 
 import View from '../components/View';
-import TextInput, { Props as TextInputProps } from '../components/TextInput';
-import Checkbox, { Props as CheckboxProps } from '../components/Checkbox';
-import Form from '../components/Form';
-import FormGroup from '../components/FormGroup';
-import Link from '../components/Link';
+import { DataProvider } from '../hocs/dataContext';
 import Button from '../components/Button';
+import { Form, Field, Formik } from 'formik';
+import FieldGroup from '../components/FieldGroup';
+import strings from '../../helpers/strings';
+import TextInput from '../components/TextInput';
 import Cart from '../components/Cart';
+import Link from '../components/Link';
 
 interface Props {}
 
-const formConfig = [
-  {
-    component: 'TextInput',
-    className: '',
-    id: 'name',
-    name: 'name',
-    label: 'Jméno',
-    badgeMessage: '',
-    isOptional: false,
-    validate: (value) =>
-      !new RegExp("^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$", 'g').test(
-        value
-      ),
-    errorMsg: 'Zkontrolujte zadané informace.',
-  },
-  {
-    component: 'TextInput',
-    className: '',
-    id: 'companyName',
-    name: 'companyName',
-    label: 'Firma',
-    badgeMessage: '',
-    isOptional: false,
-    validate: (value) =>
-      !new RegExp("^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$", 'g').test(
-        value
-      ),
-    errorMsg: 'Zkontrolujte zadané informace.',
-  },
-  {
-    component: 'TextInput',
-    className: 'half',
-    id: 'phone',
-    name: 'phone',
-    label: 'Telefon',
-    badgeMessage: '',
-    isOptional: false,
-    validate: (value) =>
-      !/^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$/i.test(
-        value
-      ),
-    errorMsg: 'Zkontrolujte zadané informace.',
-  },
-  {
-    component: 'TextInput',
-    className: 'half half--no-left-border',
-    id: 'email',
-    name: 'email',
-    label: 'E-mail',
-    badgeMessage: '',
-    isOptional: false,
-    validate: (value) =>
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value),
-    errorMsg: 'Zkontrolujte zadané informace.',
-  },
-  {
-    component: 'TextInput',
-    className: 'half',
-    id: 'ico',
-    name: 'ico',
-    label: 'IČO',
-    badgeMessage: '',
-    isOptional: true,
-    validate: (value) => !/^[0-9]/i.test(value),
-    errorMsg: 'Zkontrolujte zadané informace.',
-  },
-  {
-    component: 'TextInput',
-    className: 'half half--no-left-border',
-    id: 'dic',
-    name: 'dic',
-    label: 'DIČ',
-    badgeMessage: 'Lorem ipsum',
-    isOptional: true,
-    validate: (value) => !/^[0-9]/i.test(value),
-    errorMsg: 'Zkontrolujte zadané informace.',
-  },
-  {
-    component: 'TextInput',
-    className: '',
-    id: 'note',
-    name: 'note',
-    label: 'Poznámka',
-    badgeMessage: '',
-    multiline: true,
-    isOptional: true,
-    validate: () => false,
-    errorMsg: 'Zkontrolujte zadané informace.',
-  },
-  {
-    component: 'Checkbox',
-    id: 'terms',
-    name: 'terms',
-    isRequired: true,
-    label: (
-      <span>
-        Souhlasím se zpracováním <Link url=''>osobních údajů</Link> a{' '}
-        <Link url=''>obchodními podmínkami</Link>.
-      </span>
-    ),
-  },
-];
+function validate(values) {
+  const errors = {};
+  const {
+    name,
+    companyName,
+    dic,
+    generic,
+    email,
+    ico,
+    phone,
+  } = strings.demandForm.errors;
+  // name validation
+  if (values.name.length === 0) {
+    errors['name'] = name;
+  }
+
+  // company name validation
+  if (values.company.length === 0) {
+    errors['company'] = companyName;
+  }
+
+  // email & phone validation
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/.test(values.email)) {
+    errors['email'] = email;
+  }
+  if (
+    !/^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$/i.test(
+      values.phone
+    )
+  ) {
+    errors['phone'] = phone;
+  }
+
+  // ico & dic validation
+  if (isNaN(values.ico)) {
+    errors['ico'] = ico;
+  }
+  if (isNaN(values.dic)) {
+    errors['dic'] = dic;
+  }
+
+  // check cart items for errors
+  for (const item in values.items) {
+    const curr = values.items[item];
+    errors['items'] = {
+      // @ts-ignore
+      ...errors.items,
+      [item]: {
+        length: isNaN(curr.length) || curr.length < 0 ? generic : '',
+        no: isNaN(curr.no) || curr.no < 0 ? generic : '',
+      },
+    };
+  }
+
+  return errors;
+}
 
 const Demand: React.FC<Props> = () => {
-  const renderForm = (formItem) => {
-    if (formItem.component === 'TextInput') {
-      return (
-        <div key={formItem.id} className={`form-item ${formItem.className}`}>
-          <TextInput
-            id={formItem.id}
-            name={formItem.name}
-            label={formItem.label}
-            badgeMessage={formItem.badgeMessage}
-            isOptional={formItem.isOptional}
-            validate={formItem.validate}
-            multiline={formItem.multiline}
-            errorMsg={formItem.errorMsg}
-          />
-        </div>
-      );
-    } else if (formItem.component === 'Checkbox') {
-      return (
-        <div key={formItem.id} className='form-item'>
-          <Checkbox
-            id={formItem.id}
-            label={formItem.label}
-            name={formItem.name}
-            isRequired={formItem.isRequired}
-          />
-        </div>
-      );
-    }
+  const [varioIds, setVarioIds] = React.useState([]);
+  const [cookies, setCookies, removeCookies] = useCookies();
+
+  React.useEffect(() => {
+    setVarioIds(cookies.parsCart || []);
+  }, [cookies.parsCart]);
+
+  const removeItem = (varioId) => {
+    setCookies(
+      'parsCart',
+      cookies.parsCart.filter((x) => x !== varioId)
+    );
+    // @ts-ignore
+    window.updateDemandBadge();
   };
+
   return (
     <View className={`demand-view`}>
       <div className={`demand-container`}>
@@ -157,20 +100,88 @@ const Demand: React.FC<Props> = () => {
           </p>
         </div>
         <div className={`demand-container__content`}>
-          <div className={`demand-container__content__cart`}></div>
-          <div className={`demand-container__content__personal-info`}>
-            <Form className={``}>
-              <FormGroup header={`Produkty`}>
-                <Cart />
-              </FormGroup>
-              <FormGroup header={`Osobní údaje`}>
-                {formConfig.map((formItem) => renderForm(formItem))}
-              </FormGroup>
-              <Button type={`submit`} className={`btn--primary`}>
-                odeslat poptávku
-              </Button>
-            </Form>
-          </div>
+          {varioIds.length !== 0 ? (
+            <Formik
+              // key={JSON.stringify(varioIds)}
+              validate={validate}
+              initialValues={{
+                name: '',
+                company: '',
+                email: '',
+                phone: '',
+                ico: '',
+                dic: '',
+                note: '',
+                items: varioIds.reduce((acc, curr) => {
+                  return {
+                    ...acc,
+                    [curr]: {
+                      length: 0,
+                      no: 0,
+                    },
+                  };
+                }, []),
+              }}
+              onSubmit={() => {}}
+            >
+              {({ values, errors }) => (
+                <Form className={`form`}>
+                  {/* <h2>Produkty</h2> */}
+                  <Cart varioIds={varioIds} removeItem={removeItem} />
+                  <h2>Osobní údaje</h2>
+                  <FieldGroup>
+                    <Field
+                      label={`Jméno`}
+                      name={'name'}
+                      hint={`Lorem ipsum dolor sit amet`}
+                      as={TextInput}
+                    />
+                  </FieldGroup>
+                  <FieldGroup>
+                    <Field label={`Firma`} name={'company'} as={TextInput} />
+                  </FieldGroup>
+                  <FieldGroup>
+                    <Field label={`E-mail`} name={'email'} as={TextInput} />
+                    <Field label={`Telefon`} name={'phone'} as={TextInput} />
+                  </FieldGroup>
+                  <FieldGroup>
+                    <Field
+                      label={`IČO`}
+                      required={false}
+                      name={'ico'}
+                      as={TextInput}
+                    />
+                    <Field
+                      label={`DIČ`}
+                      required={false}
+                      name={'dic'}
+                      as={TextInput}
+                    />
+                  </FieldGroup>
+                  <FieldGroup>
+                    <Field
+                      label={`Poznámka`}
+                      name={`note`}
+                      multiline={true}
+                      as={TextInput}
+                    />
+                  </FieldGroup>
+                  <Button type={`submit`} className={`btn--primary`}>
+                    Odeslat
+                  </Button>
+
+                  {/* <pre>{JSON.stringify({ values, errors }, null, 2)}</pre> */}
+                </Form>
+              )}
+            </Formik>
+          ) : (
+            <p>
+              V košíku nejsou žádné položky.{' '}
+              <Link target={`_self`} url={`/products`}>
+                Přejít na produkty
+              </Link>
+            </p>
+          )}
         </div>
       </div>
     </View>

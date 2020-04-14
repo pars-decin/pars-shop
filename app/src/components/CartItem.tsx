@@ -2,32 +2,35 @@ import React, { ReactElement } from 'react';
 import TextInput, { Props as TextInputProps } from './TextInput';
 import Badge from './Badge';
 import Img from './Img';
+import { Field, useFormik, useField } from 'formik';
+import strings from '../../helpers/strings';
+import TextInputCounter from './TextInputCounter';
 
 interface Props {
   header: string;
   perex: string;
   index: number;
-  shopItemId: string;
-  textInputs: Array<TextInputProps>;
-  removeItem: (shopItemId: string) => void;
+  varioId: string;
+  unit: string;
+  removeItem: (varioId: string) => void;
 }
 
 const CartItem: React.FC<Props> = ({
   header,
   perex,
-  textInputs,
   index,
   removeItem,
-  shopItemId,
+  varioId,
+  unit,
 }) => {
+  const [field, meta, helpers] = useField(`items.${varioId}`);
   return (
     <div className={`cart-item`}>
       <div className={`cart-item__col cart-item__col__name`}>
-        {index === 0 && <div className={`cart-item__col__header`}>Produkt</div>}
         <div className={`cart-item__col__name__content`}>
           <span
             className={`cart-item__col__name__content__remove`}
-            onClick={() => removeItem(shopItemId)}
+            onClick={() => removeItem(varioId)}
           >
             <Img src={`/icons/removeProductFromCart.svg`} />
           </span>
@@ -35,34 +38,44 @@ const CartItem: React.FC<Props> = ({
           <p>{perex}</p>
         </div>
       </div>
-      {textInputs.map((textInput) => (
-        <div
-          key={textInput.id}
-          className={`cart-item__col cart-item__col__input`}
-        >
-          {/* header of the table */}
-          {index === 0 && (
-            <div className={`cart-item__col__header`}>
-              {textInput.label}
-              {textInput.badgeMessage && (
-                <Badge type={`info`} className={`white`}>
-                  {textInput.badgeMessage}
-                </Badge>
-              )}
-            </div>
-          )}
-          <div className={`cart-item__col__input__content`}>
-            <TextInput {...textInput} />
+      {unit !== `ks` && (
+        <>
+          <div className='cart-item__col cart-item__col__input'>
+            <Field
+              name={`items.${varioId}.length`}
+              label={`${strings.length} [${unit}]`}
+              as={TextInput}
+            />
           </div>
-        </div>
-      ))}
-      {/* <div className={`cart-item__col cart-item__col__remove`}>
-        {index === 0 && <div className={`cart-item__col__header`}>Odebrat</div>}
-        <div
-          className={`cart-item__col__remove__content`}
-          onClick={() => removeItem(shopItemId)}
+          <TextInputCounter
+            handleValue={(inc) => () => {
+              helpers.setValue({
+                ...meta.value,
+                length: meta.value.length + inc,
+              });
+              helpers.setTouched(true);
+            }}
+            inc={1}
+          />
+        </>
+      )}
+      <div className='cart-item__col cart-item__col__input'>
+        <Field
+          name={`items.${varioId}.no`}
+          label={strings.itemsNo}
+          as={TextInput}
         />
-      </div> */}
+      </div>
+      <TextInputCounter
+        handleValue={(inc) => () => {
+          helpers.setValue({
+            ...meta.value,
+            no: meta.value.no + inc,
+          });
+          helpers.setTouched(true);
+        }}
+        inc={1}
+      />
     </div>
   );
 };
