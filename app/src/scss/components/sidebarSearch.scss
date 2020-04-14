@@ -24,8 +24,14 @@
     // padding-left: 0;
     margin-bottom: 30px;
     .text-input {
+      margin-left: 0;
+      padding-left: 40px;
+      background-position: 10px center;
+      // background-repeat: repeat;
       border: 1px solid $red-400;
-      width: calc(100%);
+      input {
+        // width: auto;
+      }
     }
   }
   @include phone {
