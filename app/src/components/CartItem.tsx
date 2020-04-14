@@ -51,7 +51,8 @@ const CartItem: React.FC<Props> = ({
             handleValue={(inc) => () => {
               helpers.setValue({
                 ...meta.value,
-                length: meta.value.length + inc,
+                length:
+                  meta.value.length + inc < 0 ? 0 : meta.value.length + inc,
               });
               helpers.setTouched(true);
             }}
@@ -70,7 +71,7 @@ const CartItem: React.FC<Props> = ({
         handleValue={(inc) => () => {
           helpers.setValue({
             ...meta.value,
-            no: meta.value.no + inc,
+            no: meta.value.length + inc < 0 ? 0 : meta.value.no + inc,
           });
           helpers.setTouched(true);
         }}
