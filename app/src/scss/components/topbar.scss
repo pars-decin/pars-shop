@@ -14,6 +14,9 @@
     margin-left: 40px;
     img {
       height: 50px;
+      &.hide {
+        display: none;
+      }
     }
   }
 

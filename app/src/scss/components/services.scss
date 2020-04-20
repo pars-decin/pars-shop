@@ -9,24 +9,30 @@
   &__list {
     display: flex;
     justify-content: center;
+    height: auto;
     &__item {
       width: 33.33%;
       max-width: 400px;
       padding: 0 30px;
-      p,
-      h3 {
+      h3,
+      p {
         text-align: center;
       }
       h3 {
         margin-bottom: 20px;
         color: $black;
       }
-      img {
+      .bg-image {
         display: block;
         margin: auto;
         margin-bottom: 30px;
-        width: auto;
+        width: 100px;
         height: auto;
+        @include for-ie {
+          height: 100px;
+          background-repeat: no-repeat;
+          background-size: contain !important;
+        }
       }
     }
   }

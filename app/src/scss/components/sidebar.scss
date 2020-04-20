@@ -7,7 +7,12 @@
   position: sticky;
   border-right: 1px solid $red-400;
   // color: $white;
-  top: $navbarHeight;
+  top: $navbarHeight !important;
+  @include for-ie {
+    // width: 400px;
+    // min-width: unset;
+    // max-width: unset;
+  }
   &__toggler {
     display: none;
     &.show {
@@ -16,7 +21,7 @@
   }
   @include portrait-tablet {
     position: relative;
-    top: 0;
+    top: 0 !important;
     width: 100%;
     min-width: initial;
     max-width: initial;
@@ -32,13 +37,14 @@
       display: flex;
       cursor: pointer;
       align-items: center;
+      // justify-content: flex-start;
       padding: 30px;
       padding-left: 0;
       &.show {
         margin-bottom: 0;
         padding-left: 0;
       }
-      img {
+      .bg-image {
         width: 22px;
         height: auto;
         display: block;

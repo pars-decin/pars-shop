@@ -3,7 +3,7 @@
     content: '';
     display: block;
     position: absolute;
-    transform: translateY($offset-line);
+    // transform: translateY($offset-line);
     left: 0;
     width: 100%;
     height: 1px;
@@ -17,6 +17,7 @@
     // Clips sidebar elements when list is collapsed
     overflow: hidden;
     background-color: $red-400;
+    position: relative;
     &.level1 {
       border-bottom: 1px solid $red-700;
       color: $white;
@@ -24,7 +25,9 @@
         background-color: $red-500;
       }
       > .sidebar__item {
-        @include sidebar-line(20px);
+        // @include sidebar-line() {
+        //   bottom: 0px;
+        // }
         background-color: $red-400;
       }
       &.expanded {
@@ -41,9 +44,12 @@
         }
         > .sidebar__item {
           background-color: $red-500;
-          @include sidebar-line;
+          // @include sidebar-line {
+          //   top: 0;
+          //   bottom: unset;
+          // }
         }
-        @include sidebar-line(0px);
+        // @include sidebar-line(0px);
       }
     }
     &.level3 {

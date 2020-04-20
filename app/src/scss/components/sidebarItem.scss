@@ -1,5 +1,5 @@
 .sidebar__item {
-  display: inline-block;
+  display: flex;
   width: 100%;
   font-size: 1.6rem;
   line-height: 2.3rem;
@@ -10,14 +10,17 @@
   // margin-left: 40px;
   cursor: pointer;
   // color: $white;
-  img {
+  .bg-image {
     $sidebar-icon-size: 18px;
 
-    transform: translateY(-2px);
-    margin-left: $sidebar-icon-size * -2;
-    margin-right: $sidebar-icon-size;
-    width: $sidebar-icon-size;
-    height: $sidebar-icon-size;
+    transform: translateY(-2px) !important;
+    @include for-ie {
+      transform: translateY(1px) !important;
+    }
+    margin-left: $sidebar-icon-size * -2 !important;
+    margin-right: $sidebar-icon-size !important;
+    width: $sidebar-icon-size !important;
+    height: $sidebar-icon-size !important;
   }
   &:hover {
     opacity: 0.5;

@@ -1,18 +1,20 @@
 const demandEl = document.querySelectorAll('.demand-badge');
-demandEl.forEach((el) => {
+Array.prototype.forEach.call(demandEl, function (el) {
   toggleBadge(el);
   appendNo();
 });
 
 window.updateDemandBadge = function () {
-  demandEl.forEach((el) => {
+  Array.prototype.forEach.call(demandEl, function (el) {
     toggleBadge(el);
     appendNo();
   });
 };
 
 function appendNo() {
-  demandEl.forEach((el) => (el.innerText = getLenghOfCart()));
+  Array.prototype.forEach.call(demandEl, function (el) {
+    el.innerText = getLenghOfCart();
+  });
 }
 
 function toggleBadge(el) {
@@ -24,13 +26,16 @@ function toggleBadge(el) {
 }
 
 function getLenghOfCart() {
-  const parsCart =
-    Object.fromEntries(
-      document.cookie.split('; ').map((c) => {
-        const [key, ...v] = c.split('=');
-        return [key, v.join('=')];
-      })
-    ).parsCart || '[]';
+  const cookieList = document.cookie.split('; ').map(function (c) {
+    const pairs = c.split('=');
+    return [pairs[0], pairs.slice(1).join('=')];
+  });
+  parsedCookies = {};
+  const cookieObj = cookieList.forEach(function (it) {
+    parsedCookies[it[0]] = it[1];
+  });
+
+  const parsCart = parsedCookies.parsCart || '[]';
 
   return JSON.parse(unescape(parsCart)).length;
 }

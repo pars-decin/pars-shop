@@ -10,6 +10,7 @@ const Scrollbar: React.FC<Props> = ({ styles = {}, children }) => {
   return (
     <Scrollbars
       style={styles as any}
+      noScrollX={true}
       trackYProps={{
         renderer: (props) => {
           const { elementRef, style, ...restProps } = props;
@@ -51,6 +52,24 @@ const Scrollbar: React.FC<Props> = ({ styles = {}, children }) => {
               ref={elementRef}
               className='thumbY'
               style={{ ...style, right: 0 }}
+            />
+          );
+        },
+      }}
+      contentProps={{
+        renderer: (props) => {
+          const { elementRef, style, ...restProps } = props;
+
+          return (
+            <div
+              {...restProps}
+              ref={elementRef}
+              className={`ScrollbarsCustom-Content`}
+              style={{
+                ...style,
+                // width: `calc(100% - 17px)`,
+                // minWidth: `unset`,
+              }}
             />
           );
         },

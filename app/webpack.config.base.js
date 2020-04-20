@@ -1,4 +1,3 @@
-
 module.exports = {
   entry: './src/index.tsx',
   module: {
@@ -6,6 +5,7 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         loader: 'awesome-typescript-loader',
+        options: {},
       },
       {
         test: /\.html$/,

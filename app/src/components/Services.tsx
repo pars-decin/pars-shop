@@ -33,7 +33,7 @@ const Services: React.FC<Props> = () => {
       <div key={name} className='services__list'>
         {data.services.map(({ name, content, icon }) => (
           <div key={name} className='services__list__item'>
-            <Img src={`/icons/${icon}`} />
+            <Img backgroundSize={`contain`} src={`/icons/${icon}`} />
             <h3>{name}</h3>
             <p>{content}</p>
           </div>

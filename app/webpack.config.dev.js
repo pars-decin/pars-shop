@@ -7,6 +7,7 @@ const dotenv = require('dotenv-webpack');
 
 module.exports = merge(base, {
   mode: 'development',
+  devtool: 'source-map',
   output: {
     filename: 'static/js/main.js',
     chunkFilename: 'static/js/[name].chunk.js',

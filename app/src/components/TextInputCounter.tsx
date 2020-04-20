@@ -9,10 +9,10 @@ interface Props {
 const TextInputCounter = ({ handleValue, inc }) => {
   return (
     <div className={`counter`}>
-      <div onClick={handleValue(inc)}>
+      <div onClick={handleValue(inc)} className={`counter--plus`}>
         <Img src={`/icons/textInputPlus.svg`} />
       </div>
-      <div onClick={handleValue(inc * -1)}>
+      <div onClick={handleValue(inc * -1)} className={`counter--minus`}>
         <Img src={`/icons/textInputMinus.svg`} />
       </div>
     </div>
