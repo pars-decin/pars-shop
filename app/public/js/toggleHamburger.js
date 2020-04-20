@@ -36,6 +36,6 @@ function toggleBurgerMenu() {
 }
 
 burger.addEventListener('click', toggleBurgerMenu);
-Array.prototype.forEach.call(nav.children, (el) =>
-  el.addEventListener('click', toggleBurgerMenu)
-);
+Array.prototype.forEach.call(nav.children, function (el) {
+  el.addEventListener('click', toggleBurgerMenu);
+});

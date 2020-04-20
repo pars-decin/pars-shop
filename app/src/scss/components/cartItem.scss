@@ -26,9 +26,10 @@
           cursor: pointer;
           position: absolute;
           left: 0;
+          top: 0;
           display: flex;
           align-items: center;
-          img {
+          .bg-image {
             width: 16px;
             height: 16px;
           }
@@ -98,9 +99,6 @@
           }
           label {
             display: block;
-          }
-          input {
-            padding-top: 20px;
           }
         }
       }

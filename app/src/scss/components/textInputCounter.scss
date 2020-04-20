@@ -4,7 +4,8 @@
   width: 50px;
   cursor: pointer;
   flex-shrink: 0;
-  > div {
+  &--minus,
+  &--plus {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,9 +13,23 @@
     &:first-child {
       border-bottom: 1px solid $red-400;
     }
-    img {
+    .bg-image {
       width: 15px;
       height: auto;
+    }
+  }
+  @include for-ie {
+    &--plus {
+      .bg-image {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    &--minus {
+      .bg-image {
+        width: 15px;
+        height: 2px;
+      }
     }
   }
 }

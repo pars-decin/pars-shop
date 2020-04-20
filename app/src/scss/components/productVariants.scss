@@ -29,7 +29,7 @@
         width: 110px;
         flex-shrink: 0;
         // offset element from scrollbar
-        margin-right: 17px;
+        // margin-right: 17px;
       }
     }
   }
@@ -116,7 +116,6 @@
           // 110px is width of the button
           // make sure, that button stay on the same line as dimensions
           width: calc(100% - 110px);
-
           // width: auto;
           // flex-shrink: 1;
           padding-left: 15px;
@@ -138,6 +137,7 @@
         .btn--invisible {
           border-left: 1px solid $red-400;
           margin-right: 0;
+          // margin-right: 17px;
         }
       }
     }

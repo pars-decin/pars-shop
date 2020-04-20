@@ -21,7 +21,7 @@
 */
 if (!Object.fromEntries) {
   Object.defineProperty(Object, 'fromEntries', {
-    value(entries) {
+    value: function (entries) {
       if (!entries || !entries[Symbol.iterator]) {
         throw new Error(
           'Object.fromEntries() requires a single iterable argument'
@@ -30,10 +30,11 @@ if (!Object.fromEntries) {
 
       const o = {};
 
-      Object.keys(entries).forEach((key) => {
-        const [k, v] = entries[key];
+      Object.keys(entries).forEach(function (key) {
+        // const [k, v] = entries[key];
+        const pairs = entries[key];
 
-        o[k] = v;
+        o[pairs[0]] = pairs[1];
       });
 
       return o;

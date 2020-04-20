@@ -17,16 +17,17 @@ function SidebarSearch({}: Props): ReactElement {
   const dispatch = useDispatch();
   const query = useSelector((x) => x.searchQuery);
 
-  const handleChange = (values) => {
+  const onSubmit = (values) => {
     setSearchQuery(dispatch)(values.search);
-    if (query.length >= 2) {
-      setActiveCategories(dispatch)('');
-    }
+    history.push('/products');
+    // if (query.length >= 2) {
+    //   setActiveCategories(dispatch)('');
+    // }
   };
 
   return (
     <div className={`sidebar-search`}>
-      <Formik initialValues={{ search: '' }} onSubmit={handleChange}>
+      <Formik initialValues={{ search: '' }} onSubmit={onSubmit}>
         {() => (
           <Form>
             <Field name={`search`} as={TextInput} label={``} />

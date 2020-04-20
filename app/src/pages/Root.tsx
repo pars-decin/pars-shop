@@ -39,7 +39,6 @@ const Root: React.FC<RouteComponentProps> = ({ location }) => {
       <Route exact path={`/`} component={Home} />
       <Route exact path={`/demand`} component={Demand} />
       <Route exact path={`/products`} component={Products} />
-      <Route exact path={`/test`} component={Test} />
       <Route path={`/product/:uid`} component={Product} />
     </Switch>
   );

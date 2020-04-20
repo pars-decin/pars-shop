@@ -1,11 +1,11 @@
 .products-cover {
   border-bottom: 1px solid $red-400;
-  img {
+  .bg-image {
     // height: 100%;
     height: cols(3);
   }
   @include landscape-tablet {
-    img {
+    .bg-image {
       height: cols(5);
       min-height: 400px;
     }

@@ -47,3 +47,9 @@ $gray: #737980;
     @content;
   }
 }
+
+@mixin for-ie {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
