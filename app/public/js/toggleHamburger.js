@@ -24,16 +24,16 @@ function toggleLogoColors(color) {
 }
 
 function toggleBurgerMenu() {
-  if (burger.classList.contains('is-active')) {
-    burger.classList.remove('is-active');
-    burger.classList.add('is-inactive');
-    replaceClassName('show', 'hide', nav);
-    toggleLogoColors('red');
-  } else if (burger.classList.contains('is-inactive')) {
-    burger.classList.add('is-active');
-    burger.classList.remove('is-inactive');
-    replaceClassName('hide', 'show', nav);
-    toggleLogoColors('white');
+  if (window.innerWidth <= 900) {
+    if (burger.classList.contains('is-active')) {
+      burger.classList.remove('is-active');
+      replaceClassName('show', 'hide', nav);
+      toggleLogoColors('red');
+    } else {
+      burger.classList.add('is-active');
+      replaceClassName('hide', 'show', nav);
+      toggleLogoColors('white');
+    }
   }
 }
 
