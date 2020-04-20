@@ -26,10 +26,12 @@ function toggleLogoColors(color) {
 function toggleBurgerMenu() {
   if (burger.classList.contains('is-active')) {
     burger.classList.remove('is-active');
+    burger.classList.add('is-inactive');
     replaceClassName('show', 'hide', nav);
     toggleLogoColors('red');
-  } else {
+  } else if (burger.classList.contains('is-inactive')) {
     burger.classList.add('is-active');
+    burger.classList.remove('is-inactive');
     replaceClassName('hide', 'show', nav);
     toggleLogoColors('white');
   }
