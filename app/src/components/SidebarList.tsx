@@ -1,5 +1,4 @@
 import React from 'react';
-import shortHash from 'short-hash';
 import SidebarBlock from './SidebarBlock';
 import { AnimatePresence } from 'framer-motion';
 

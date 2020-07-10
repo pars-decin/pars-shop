@@ -1,5 +1,4 @@
 import React from 'react';
-import shortHash from 'short-hash';
 
 import Sidebar from '../components/Sidebar';
 import Button from '../components/Button';

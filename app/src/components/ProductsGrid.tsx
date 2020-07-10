@@ -1,6 +1,5 @@
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import shortHash from 'short-hash';
 
 import ProductsGridItem from './ProductsGridItem';
 import Button from './Button';

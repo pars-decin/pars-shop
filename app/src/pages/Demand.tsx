@@ -1,10 +1,11 @@
 import React from 'react';
 import { useCookies } from 'react-cookie';
+import axios from 'axios';
 
 import View from '../components/View';
 import { DataProvider } from '../hocs/dataContext';
 import Button from '../components/Button';
-import { Form, Field, Formik } from 'formik';
+import { Form as form, Field, Formik, Form } from 'formik';
 import FieldGroup from '../components/FieldGroup';
 import strings from '../../helpers/strings';
 import TextInput from '../components/TextInput';
@@ -57,14 +58,21 @@ function validate(values) {
   // check cart items for errors
   for (const item in values.items) {
     const curr = values.items[item];
-    errors['items'] = {
-      // @ts-ignore
-      ...errors.items,
-      [item]: {
-        length: isNaN(curr.length) || curr.length < 0 ? generic : '',
-        no: isNaN(curr.no) || curr.no < 0 ? generic : '',
-      },
-    };
+    if (
+      isNaN(curr.length) ||
+      curr.length < 0 ||
+      isNaN(curr.no) ||
+      curr.no < 0
+    ) {
+      errors['items'] = {
+        // @ts-ignore
+        ...errors.items,
+        [item]: {
+          length: generic,
+          no: generic,
+        },
+      };
+    }
   }
 
   return errors;
@@ -122,9 +130,26 @@ const Demand: React.FC<Props> = () => {
                   };
                 }, []),
               }}
-              onSubmit={() => {}}
+              onSubmit={(values, actions) => {
+                axios
+                  .post(
+                    'https://pars-shop-server.dominiktomcik23.now.sh/send',
+                    {
+                      values,
+                    }
+                  )
+                  .then((res) => {
+                    if (res.status === 200) {
+                      actions.resetForm();
+                      removeCookies('parsCart');
+                      // @ts-ignore
+                      window.updateDemandBadge();
+                      window.scrollTo(0, 0);
+                    }
+                  });
+              }}
             >
-              {({ values, errors }) => (
+              {() => (
                 <Form className={`form`}>
                   {/* <h2>Produkty</h2> */}
                   <Cart varioIds={varioIds} removeItem={removeItem} />

@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "name": "pars-shop-server",
+  "builds": [
+    {
+      "src": "./dist/server/server.js",
+      "use": "@now/node"
+    }
+  ],
+  "env": {
+    "API_KEY": "@pars-api-key",
+    "AUTH_DOMAIN": "@pars-auth-domain",
+    "DATABASE_URL": "@pars-database-url",
+    "PROJECT_ID": "@pars-project-id",
+    "STORAGE_BUCKET": "@pars-storage-bucket",
+    "MESSAGING_SENDERID": "@pars-messaging-sender-id",
+    "APP_ID": "@pars-app-id"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/server/server.js"
+    }
+  ]
+}

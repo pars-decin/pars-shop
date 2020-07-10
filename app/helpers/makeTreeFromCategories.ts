@@ -1,5 +1,4 @@
 import shortHash from 'short-hash';
-import mergeHashedLevels from './mergeHashedLevels';
 import { Category, CategoriesTree } from '../types';
 
 export default function makeTreeFromCategories(
