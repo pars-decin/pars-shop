@@ -9,7 +9,6 @@ import Product from './Product';
 import Demand from './Demand';
 import Home from './Home';
 import Products from './Products';
-import Test from './Test';
 
 // types
 import { RouteComponentProps } from 'react-router-dom';

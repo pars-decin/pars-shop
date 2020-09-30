@@ -145,7 +145,7 @@ const Demand: React.FC<Props> = () => {
                 }, []),
               }}
               onSubmit={(values, actions) => {
-                const apiUrl = absoluteUrl(`localhost:9999`);
+                const apiUrl = absoluteUrl(`localhost:3000`);
                 axios
                   .post(
                     `${apiUrl}/api/send-demand`,
