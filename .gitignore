@@ -2,3 +2,8 @@
 
 /server/node_modules
 /server/.env
+/server/.vercel
+/server/requests.http
+
+.vscode
+.DS_Store

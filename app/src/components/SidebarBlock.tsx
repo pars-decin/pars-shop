@@ -63,7 +63,7 @@ const SidebarBlock: React.FC<Props> = ({
     // if active categories has changed, and there is a match with
     // active categories toggle active state
     // active state will both expand list and highlight current item
-    if (activeCategories.includes(id)) {
+    if (new RegExp(`^${id}`).test(activeCategories)) {
       setStatus({
         isActive: true,
         expandList: hasList ? true : false,

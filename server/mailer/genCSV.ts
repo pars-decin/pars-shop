@@ -1,14 +1,18 @@
 export function genCSV(input: Array<object>, filename: string) {
-  // create header for csv file from keys
-  let content = Object.keys(input[0]).join(';') + '\n';
+  const makeRow = (array: Array<string>) => array.join(';') + '\n';
+
+  // get header (= keys) for csv file from keys of the first object in array
+  let content = makeRow(Object.keys(input[0]));
 
   input.forEach((item) => {
-    content += Object.values(item).join(';') + '\n';
+    content += makeRow(Object.values(item));
   });
 
+  const buffer = Buffer.from(content);
+
   return {
-    filename: filename,
-    content: content,
+    filename,
+    content: buffer.toString(`base64`),
     contentType: 'text/csv',
   };
 }

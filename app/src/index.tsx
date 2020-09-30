@@ -24,9 +24,7 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-interface Props {}
-
-const App: React.FC<Props> = hot(() => {
+const App: React.FC = hot(() => {
   return (
     <Provider store={store}>
       <HashRouter>

@@ -1,62 +1,23 @@
 .home-view {
-  padding-right: 0;
   &__hero {
     // height: 100vh;
-    height: calc(100vh - #{$navbarHeight});
+    // height: calc(100vh - #{$navbarHeight});
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     margin-left: -1px;
-    background-color: $red-400;
-    &__category {
-      padding: 0 cols(1);
-      display: flex;
-      cursor: pointer;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-end;
-      width: 50%;
-      height: 100%;
-      position: relative;
-      &:first-child {
-        align-items: flex-start;
-        border-right: 2px solid $white;
-      }
-      h1 {
-        color: $white;
-        font-size: cols(0.7);
-        margin-bottom: 30px;
-      }
-      h1,
-      // anchor tag is used in webflow
-      a,
-      button {
-        position: relative;
-        z-index: 2;
-      }
-      &__img-wrap {
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        .bg-image-source {
-          transition: all 0.2s ease-in-out;
-          @include for-ie {
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-          }
-        }
-        &:hover {
-          .bg-image-source {
-            transform: scale(1.02);
-            opacity: 0.7;
-          }
+    // .products-grid {
+    //   .products-grid-item:nth-child(3n) {
+    //     border-right: 0;
+    //   }
+    // }
+    &__featured {
+      border-right: 1px solid $red-400;
+      &__header {
+        padding: cols(0.25) cols(0) cols(0.25) cols(0.25);
+        border-bottom: 1px solid $red-400;
+        .link {
+          cursor: pointer;
         }
       }
     }
@@ -65,8 +26,13 @@
     padding-right: 30px;
     &__hero {
       margin-bottom: 30px;
-      margin-top: 30px;
+      // margin-top: 30px;
       width: calc(100%);
+      &__featured {
+        &__header {
+          padding: cols(1) 0;
+        }
+      }
     }
   }
   @include phone {
@@ -75,15 +41,10 @@
       justify-content: center;
       align-items: flex-start;
       margin-bottom: 30px;
-      &__category {
-        align-items: flex-start;
-        width: 100%;
-        h1 {
-          font-size: 6rem;
-        }
-        &:first-child {
-          border-right: 0;
-          border-bottom: 2px solid $white;
+      &__featured {
+        border-right: 0;
+        &__header {
+          border-bottom: 0;
         }
       }
     }

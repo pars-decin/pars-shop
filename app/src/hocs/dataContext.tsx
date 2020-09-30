@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { apiUrl } from '../../helpers/apiUrl';
+import { absoluteUrl } from '../../helpers/absoluteUrl';
 // import data from '../../data';
 import { Context as ContextTypes } from '../../types';
 
@@ -9,13 +9,17 @@ export const DataProvider: React.Context<ContextTypes> = React.createContext(
 );
 
 interface Props {}
-
 const withDataProvider = (C) => {
   const WithDataProvider: React.FC<Props> = ({ ...props }) => {
     const [data, setData] = React.useState<ContextTypes>(null);
 
     React.useEffect(() => {
-      axios.get(apiUrl('')).then(({ data }) => setData(data));
+      const baseUrl = absoluteUrl(`localhost:9999`);
+      try {
+        axios.get(`${baseUrl}/api`).then(({ data }) => setData(data));
+      } catch (err) {
+        console.log({ err });
+      }
     }, []);
 
     if (!data) {

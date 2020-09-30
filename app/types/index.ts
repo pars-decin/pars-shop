@@ -1,3 +1,5 @@
+import { type } from 'os';
+
 export type RawCategory = {
   level0: string;
   level1?: string | undefined;
@@ -52,9 +54,13 @@ export type CategoriesTree = {
   name: string;
   list: Array<CategoriesTree>;
 };
+export type CategoriesTrees = {
+  categoriesByMaterial: Array<CategoriesTree>;
+  categoriesByProffesion: Array<CategoriesTree>;
+};
 
 export type Context = {
-  categoriesTree: Array<CategoriesTree>;
+  categoriesTree: CategoriesTrees;
   categories: Array<Category>;
   shopItems: Array<ShopItem>;
   shopItemsVariants: Array<ShopItemVariant>;

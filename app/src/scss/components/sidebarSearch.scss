@@ -22,7 +22,7 @@
   }
   @include portrait-tablet {
     // padding-left: 0;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     .text-input {
       margin-left: 0;
       padding-left: 40px;
@@ -33,6 +33,9 @@
         // width: auto;
       }
     }
+  }
+  @include portrait-tablet {
+    margin-bottom: 30px;
   }
   @include phone {
     .text-input {

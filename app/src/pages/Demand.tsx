@@ -11,6 +11,8 @@ import strings from '../../helpers/strings';
 import TextInput from '../components/TextInput';
 import Cart from '../components/Cart';
 import Link from '../components/Link';
+import { absoluteUrl } from '../../helpers/absoluteUrl';
+import { getShopItemByVarioId } from '../../helpers/getShopItemByVarioId';
 
 interface Props {}
 
@@ -59,8 +61,8 @@ function validate(values) {
   for (const item in values.items) {
     const curr = values.items[item];
     if (
-      isNaN(curr.length) ||
-      curr.length < 0 ||
+      isNaN(curr.dimensions) ||
+      curr.dimensions < 0 ||
       isNaN(curr.no) ||
       curr.no < 0
     ) {
@@ -68,7 +70,7 @@ function validate(values) {
         // @ts-ignore
         ...errors.items,
         [item]: {
-          length: generic,
+          dimensions: generic,
           no: generic,
         },
       };
@@ -80,6 +82,7 @@ function validate(values) {
 
 const Demand: React.FC<Props> = () => {
   const [varioIds, setVarioIds] = React.useState([]);
+  const { shopItemsVariants } = React.useContext(DataProvider);
   const [cookies, setCookies, removeCookies] = useCookies();
 
   React.useEffect(() => {
@@ -93,6 +96,16 @@ const Demand: React.FC<Props> = () => {
     );
     // @ts-ignore
     window.updateDemandBadge();
+  };
+
+  const dummyFormData = {
+    name: 'Dominik Tomčík',
+    company: 'Steezy',
+    email: 'dominik.tomcik23@gmail.com',
+    phone: '+420 775 337 604',
+    ico: '12367890',
+    dic: '12345890',
+    note: 'Lorem ipsum dolor sit amet',
   };
 
   return (
@@ -120,23 +133,42 @@ const Demand: React.FC<Props> = () => {
                 ico: '',
                 dic: '',
                 note: '',
+                ...dummyFormData,
                 items: varioIds.reduce((acc, curr) => {
                   return {
                     ...acc,
                     [curr]: {
-                      length: 0,
+                      dimensions: 0,
                       no: 0,
                     },
                   };
                 }, []),
               }}
               onSubmit={(values, actions) => {
+                const apiUrl = absoluteUrl(`localhost:9999`);
                 axios
                   .post(
-                    'https://pars-shop-server.dominiktomcik23.now.sh/send',
-                    {
-                      values,
-                    }
+                    `${apiUrl}/api/send-demand`,
+                    Object.assign(
+                      {},
+                      {
+                        values: {
+                          ...values,
+                          items: Object.keys(values.items).map((varioId) => {
+                            const { unit } = getShopItemByVarioId(
+                              shopItemsVariants,
+                              varioId
+                            );
+                            return {
+                              dimensions: values.items[varioId].dimensions,
+                              no: values.items[varioId].no,
+                              varioId: varioId,
+                              unit: unit,
+                            };
+                          }),
+                        },
+                      }
+                    )
                   )
                   .then((res) => {
                     if (res.status === 200) {
@@ -194,8 +226,6 @@ const Demand: React.FC<Props> = () => {
                   <Button type={`submit`} className={`btn--primary`}>
                     Odeslat
                   </Button>
-
-                  {/* <pre>{JSON.stringify({ values, errors }, null, 2)}</pre> */}
                 </Form>
               )}
             </Formik>

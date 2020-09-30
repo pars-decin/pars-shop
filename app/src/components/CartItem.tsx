@@ -42,7 +42,7 @@ const CartItem: React.FC<Props> = ({
         <>
           <div className='cart-item__col cart-item__col__input'>
             <Field
-              name={`items.${varioId}.length`}
+              name={`items.${varioId}.dimensions`}
               label={`${strings.length} [${unit}]`}
               as={TextInput}
             />
@@ -51,8 +51,10 @@ const CartItem: React.FC<Props> = ({
             handleValue={(inc) => () => {
               helpers.setValue({
                 ...meta.value,
-                length:
-                  meta.value.length + inc < 0 ? 0 : meta.value.length + inc,
+                dimensions:
+                  meta.value.dimensions + inc < 0
+                    ? 0
+                    : meta.value.dimensions + inc,
               });
               helpers.setTouched(true);
             }}
@@ -71,7 +73,7 @@ const CartItem: React.FC<Props> = ({
         handleValue={(inc) => () => {
           helpers.setValue({
             ...meta.value,
-            no: meta.value.length + inc < 0 ? 0 : meta.value.no + inc,
+            no: meta.value.no + inc < 0 ? 0 : meta.value.no + inc,
           });
           helpers.setTouched(true);
         }}

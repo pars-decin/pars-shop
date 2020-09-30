@@ -19,6 +19,17 @@
       margin-bottom: 30px;
     }
   }
+  &__content-wrapper {
+  }
+  &__section-header {
+    color: $red-400;
+    background-color: $light-gray;
+    padding: 15px 0;
+    padding-left: 43px;
+    border-top: 1px solid $red-400;
+    border-bottom: 1px solid $red-400;
+    display: block;
+  }
   @include portrait-tablet {
     position: relative;
     top: 0 !important;
@@ -33,6 +44,12 @@
     // width: calc(100% + 90px);
     // left: 30px;
 
+    &__content-wrapper {
+      padding: 0px 0 30px;
+    }
+    &__section-header {
+      border-top: 0;
+    }
     &__toggler {
       display: flex;
       cursor: pointer;

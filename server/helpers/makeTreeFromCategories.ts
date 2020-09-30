@@ -3,7 +3,9 @@ import mergeHashedLevels from './mergeHashedLevels';
 import { Category, CategoriesTree } from '../../app/types';
 
 export default function makeTreeFromCategories(
-  categoriesWithLevelsInArray: Array<Category>
+  categoriesWithLevelsInArray: Array<Category>,
+  startIndex: number,
+  prefix: string
 ): Array<CategoriesTree> {
   let dump = {};
   let tree = [];
@@ -29,7 +31,6 @@ export default function makeTreeFromCategories(
       tree.push(dump[categoryId]);
     } else if (
       parentId.length > 0 &&
-      // Same here with definition on beggining of function.
       dump[parentId].list.findIndex((x) => x.id === categoryId) === -1
     ) {
       dump[parentId].list.push(dump[categoryId]);
@@ -48,8 +49,11 @@ export default function makeTreeFromCategories(
   }
 
   for (const categoryWithLevelsInArray of categoriesWithLevelsInArray) {
-    makeTree(categoryWithLevelsInArray, 0, '');
+    const slicedLevels = categoryWithLevelsInArray.levels.slice(startIndex);
+
+    makeTree({ ...categoryWithLevelsInArray, levels: slicedLevels }, 0, ``);
   }
 
+  // console.log(tree);
   return tree;
 }
