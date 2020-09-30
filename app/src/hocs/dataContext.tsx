@@ -16,7 +16,7 @@ const withDataProvider = (C) => {
     React.useEffect(() => {
       const baseUrl = absoluteUrl(`localhost:9999`);
       try {
-        axios.get(`${baseUrl}/api`).then(({ data }) => setData(data));
+        axios.get(`${baseUrl}/api/data`).then(({ data }) => setData(data));
       } catch (err) {
         console.log({ err });
       }
