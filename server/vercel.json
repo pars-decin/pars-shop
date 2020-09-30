@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "name": "pars-shop-server",
   "builds": [
     {
-      "src": "./dist/server/server.js",
+      "src": "dist/server/server.js",
       "use": "@now/node"
     }
   ],
@@ -13,7 +12,7 @@
     "DATABASE_URL": "@pars-database-url",
     "PROJECT_ID": "@pars-project-id",
     "STORAGE_BUCKET": "@pars-storage-bucket",
-    "MESSAGING_SENDERID": "@pars-messaging-sender-id",
+    "MESSAGING_SENDER_ID": "@pars-messaging-sender-id",
     "APP_ID": "@pars-app-id"
   },
   "routes": [

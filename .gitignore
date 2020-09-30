@@ -3,6 +3,7 @@
 /server/node_modules
 /server/.env
 /server/.vercel
+/server/dist
 /server/requests.http
 
 .vscode
