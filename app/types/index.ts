@@ -1,5 +1,3 @@
-import { type } from 'os';
-
 export type RawCategory = {
   level0: string;
   level1?: string | undefined;
