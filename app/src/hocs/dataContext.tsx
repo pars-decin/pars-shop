@@ -3,6 +3,7 @@ import axios from 'axios';
 import { absoluteUrl } from '../../helpers/absoluteUrl';
 // import data from '../../data';
 import { Context as ContextTypes } from '../../types';
+import Loading from '../components/Loading';
 
 export const DataProvider: React.Context<ContextTypes> = React.createContext(
   null
@@ -23,7 +24,7 @@ const withDataProvider = (C) => {
     }, []);
 
     if (!data) {
-      return null;
+      return <Loading />;
     }
 
     return (

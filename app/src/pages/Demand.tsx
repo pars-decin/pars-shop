@@ -133,7 +133,6 @@ const Demand: React.FC<Props> = () => {
                 ico: '',
                 dic: '',
                 note: '',
-                ...dummyFormData,
                 items: varioIds.reduce((acc, curr) => {
                   return {
                     ...acc,
