@@ -99,9 +99,9 @@ const Demand: React.FC<Props> = () => {
   };
 
   const dummyFormData = {
-    name: 'Dominik Tomčík',
-    company: 'Steezy',
-    email: 'dominik.tomcik23@gmail.com',
+    name: 'Jan Novák',
+    company: 'Firma',
+    email: 'novak@firma.cz',
     phone: '+420 775 337 604',
     ico: '12367890',
     dic: '12345890',
@@ -126,13 +126,13 @@ const Demand: React.FC<Props> = () => {
               // key={JSON.stringify(varioIds)}
               validate={validate}
               initialValues={{
-                name: '',
-                company: '',
-                email: '',
-                phone: '',
-                ico: '',
-                dic: '',
-                note: '',
+                ...dummyFormData, // name: '',
+                // company: '',
+                // email: '',
+                // phone: '',
+                // ico: '',
+                // dic: '',
+                // note: '',
                 items: varioIds.reduce((acc, curr) => {
                   return {
                     ...acc,
