@@ -1,0 +1,22 @@
+{
+  "env": {
+    "API_KEY": "@pars-api-key",
+    "AUTH_DOMAIN": "@pars-auth-domain",
+    "DATABASE_URL": "@pars-database-url",
+    "PROJECT_ID": "@pars-project-id",
+    "STORAGE_BUCKET": "@pars-storage-bucket",
+    "MESSAGING_SENDER_ID": "@pars-messaging-sender-id",
+    "APP_ID": "@pars-app-id",
+    "SG_API_KEY": "@pars-sg-api-key"
+  },
+  "routes": [
+    {
+      "src": "/api/send-demand",
+      "dest": "/api/sender.ts"
+    },
+    {
+      "src": "/api/data",
+      "dest": "api/data.ts"
+    }
+  ]
+}

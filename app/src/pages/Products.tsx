@@ -14,7 +14,7 @@ import { useSelector } from '../store/reducer';
 
 // hocs
 import { withLocation } from '../hocs/withLocation';
-import { CategoriesTree, Category } from '../../types';
+import { CategoriesTrees, Category, CategoriesTree } from '../../types';
 
 interface Props {}
 
@@ -28,6 +28,7 @@ const Products: React.FC<Props> = () => {
   const productsRef = React.useRef(null);
 
   let output: CategoriesTree;
+
   const findCurrentCategory = (
     categories: Array<CategoriesTree>,
     activeCategory: string
@@ -45,7 +46,15 @@ const Products: React.FC<Props> = () => {
   };
 
   React.useEffect(() => {
-    setCurrentCategory(findCurrentCategory(categoriesTree, activeCategories));
+    setCurrentCategory(
+      findCurrentCategory(
+        [
+          ...categoriesTree.categoriesByMaterial,
+          ...categoriesTree.categoriesByProffesion,
+        ],
+        activeCategories
+      )
+    );
   }, [activeCategories]);
 
   return (

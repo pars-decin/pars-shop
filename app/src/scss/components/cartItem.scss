@@ -51,8 +51,9 @@
     }
 
     &__input {
-      width: 250px;
+      width: 200px;
       border-left: 0;
+      flex-shrink: 0;
 
       .text-input {
         width: auto;
@@ -65,7 +66,7 @@
   @include landscape-tablet {
     &__col {
       &__input {
-        width: 150px;
+        width: 125px;
         flex-shrink: 0;
       }
     }

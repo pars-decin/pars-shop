@@ -1,45 +1,61 @@
 import React from 'react';
-import shortHash from 'short-hash';
-
 import Sidebar from '../components/Sidebar';
-import Button from '../components/Button';
 import View from '../components/View';
-import Img from '../components/Img';
-
-import consts from '../../helpers/strings';
-
 import { DataProvider } from '../hocs/dataContext';
-
-import { withLocation, LocationProvider } from '../hocs/withLocation';
+import { LocationProvider, withLocation } from '../hocs/withLocation';
+import { ShopItem } from '../../types';
+import ProductsGrid from '../components/ProductsGrid';
+import Link from '../components/Link';
 
 interface Props {}
 
+function findShopItemInCategory(inCategories, category) {
+  const regex = new RegExp(`${category}`);
+  return inCategories.find((inCategory) => regex.test(inCategory));
+}
+
+function getShopItemsByCategory({ shopItems, category }) {
+  let output = [];
+
+  for (const shopItem of shopItems) {
+    const isShopItemInCategory = findShopItemInCategory(
+      shopItem.inCategories,
+      category
+    );
+    if (isShopItemInCategory) {
+      output = [...output, shopItem];
+    }
+    if (output.length === 3) return output;
+  }
+}
+
 const Home: React.FC<Props> = () => {
-  const { categoriesTree } = React.useContext(DataProvider);
-  const { history } = React.useContext(LocationProvider);
+  const { shopItems, categoriesTree } = React.useContext(DataProvider);
+  const { history, location } = React.useContext(LocationProvider);
 
   return (
     <View className={`home-view with-sidebar`}>
       <Sidebar />
       <div className={`home-view__hero`}>
-        {categoriesTree.map(({ name, id }, i) => (
-          <div
-            key={id}
-            onClick={() => history.push(`/products?=${id}`)}
-            className={`home-view__hero__category`}
-          >
-            <h1>{name}</h1>
-            <Button
-              className={`btn--primary`}
-              handleClick={() => history.push(`/products?c=${id}`)}
-            >
-              {consts.detail}
-            </Button>
-            <div className={`home-view__hero__category__img-wrap`}>
-              <Img src={`/img/others/homeHero${i}.jpg`} />
+        {categoriesTree.categoriesByProffesion.map((category) => {
+          const featuredShopItems = getShopItemsByCategory({
+            shopItems,
+            category: category.id,
+          });
+
+          return (
+            <div className={`home-view__hero__featured`} key={category.id}>
+              <div className={`home-view__hero__featured__header`}>
+                <h2>{category.name}</h2>
+                <span
+                  className={`link`}
+                  onClick={() => history.push(`/products?c=${category.id}`)}
+                >{`Zobrazit vše`}</span>
+              </div>
+              <ProductsGrid shopItems={featuredShopItems} />
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </View>
   );

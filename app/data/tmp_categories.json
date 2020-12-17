@@ -1,0 +1,1035 @@
+{
+  "data": [
+    {
+      "level0": "Ocel",
+      "level1": "Instalatér",
+      "level2": "Potrubní díly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "priruby-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Instalatér",
+      "level2": "Potrubní díly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "dna-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Instalatér",
+      "level2": "Potrubní díly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "oblouky-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Instalatér",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-svarovana-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Instalatér",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-zavitova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Instalatér",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-bezesva-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Instalatér",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-bezesva-presna-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Instalatér",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "elektroda-bazicka-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Instalatér",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "pletivo-4hr-pvc-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-i-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-ipe-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-hea-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-heb-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil U",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-u-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil U",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-upe-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil U",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-ut-tenkostenna-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-rovnoramenny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-nerovnoramenny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-tenkostenny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-tenkostenny-perforovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil T",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-t-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-svarovana-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-zavitova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-bezesva-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-bezesva-presna-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-ctvercova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-tvaru-l-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-tvaru-t-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-ctvercova-tvaru-c-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-tvaru-c-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč kruhová",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-kruhova-valcovana-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč čtvercová",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-ctyrhran-tazeny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč čtvercová",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-ctyrhran-valcovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč plochá",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-plocha-valcovana-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč šestihraná",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-sestihran-tazeny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-hladky-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-derovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-protiskluzovy-listek-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-pozinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-trapezovy-pozinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tahokov-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Betonářská ocel",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-zebirkova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Kari sítě",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "sit-svarovana-kari-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Rošty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "rost-podlahovy-zinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Rošty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "uchyt-k-rostum-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Rošty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "stupen-schodistovy-pozinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Dráty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "drat-tazeny-zinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Dráty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "drat-tazeny-cerny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Dráty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "drat-tazeny-zinkovany-pvc-ral-6005-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Potrubní díly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "priruby-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Potrubní díly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "dna-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Potrubní díly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "oblouky-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "elektroda-bazicka-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Kutil",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "pletivo-4hr-pvc-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-ctvercova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-tvaru-l-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-tvaru-t-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-ctvercova-tvaru-c-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-tvaru-c-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč kruhová",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-kruhova-valcovana-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč čtvercová",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-ctyrhran-tazeny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč čtvercová",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-ctyrhran-valcovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč plochá",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-plocha-valcovana-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč šestihraná",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-sestihran-tazeny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "elektroda-bazicka-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Nástrojář",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "pletivo-4hr-pvc-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-i-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-ipe-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-hea-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-heb-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil U",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-u-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil U",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-upe-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil U",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-ut-tenkostenna-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-rovnoramenny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-nerovnoramenny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-tenkostenny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-tenkostenny-perforovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil T",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-t-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-svarovana-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-zavitova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-bezesva-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-bezesva-presna-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-hladky-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-derovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-protiskluzovy-listek-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-pozinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-trapezovy-pozinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tahokov-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Betonářská ocel",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-zebirkova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Kari sítě",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "sit-svarovana-kari-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Rošty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "rost-podlahovy-zinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Rošty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "uchyt-k-rostum-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Rošty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "stupen-schodistovy-pozinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "elektroda-bazicka-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Stavař",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "pletivo-4hr-pvc-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-i-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-ipe-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-hea-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil I",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-heb-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil U",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-u-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil U",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-upe-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil U",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-ut-tenkostenna-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-rovnoramenny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-nerovnoramenny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-tenkostenny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil L",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-l-tenkostenny-perforovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Profily I, U, L, T",
+      "level3": "Profil T",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-prurezu-t-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-svarovana-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-zavitova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-bezesva-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Trubky",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-bezesva-presna-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-ctvercova-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-tvaru-l-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-tvaru-t-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-ctvercova-tvaru-c-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Jäkly",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "trubka-obdelnikova-tvaru-c-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč kruhová",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-kruhova-valcovana-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč čtvercová",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-ctyrhran-tazeny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč čtvercová",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-ctyrhran-valcovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč plochá",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-plocha-valcovana-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Tyčová ocel",
+      "level3": "Tyč šestihraná",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tyc-sestihran-tazeny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-hladky-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-derovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-protiskluzovy-listek-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-pozinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "plech-trapezovy-pozinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Plechy",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "tahokov-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Rošty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "rost-podlahovy-zinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Rošty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "uchyt-k-rostum-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Rošty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "stupen-schodistovy-pozinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Dráty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "drat-tazeny-zinkovany-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Dráty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "drat-tazeny-cerny-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Dráty",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "drat-tazeny-zinkovany-pvc-ral-6005-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "elektroda-bazicka-OCEL"
+    },
+    {
+      "level0": "Ocel",
+      "level1": "Zámečník",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "pletivo-4hr-pvc-OCEL"
+    },
+    {
+      "level0": "Nerez",
+      "level1": "Zámečník",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "elektroda-bazicka-OCEL"
+    },
+    {
+      "level0": "Nerez",
+      "level1": "Zámečník",
+      "level2": "Ostatní",
+      "coverImg": "dummy_cover.jpg",
+      "shopItemId": "drat-tazeny-cerny-OCEL"
+    }
+  ]
+}

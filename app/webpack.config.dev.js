@@ -58,6 +58,6 @@ module.exports = merge(base, {
     contentBase: path.resolve(__dirname, 'public'),
     historyApiFallback: true,
     publicPath: '/',
-    port: 3000,
+    port: 8888,
   },
 });

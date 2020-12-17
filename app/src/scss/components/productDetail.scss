@@ -2,8 +2,6 @@
   display: flex;
   width: 100%;
   margin-left: -1px;
-  @include for-ie {
-  }
   h2 {
     color: $red-400;
     font-size: 1.8rem;

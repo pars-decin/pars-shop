@@ -1,15 +1,18 @@
 import React from 'react';
 import { useCookies } from 'react-cookie';
+import axios from 'axios';
 
 import View from '../components/View';
 import { DataProvider } from '../hocs/dataContext';
 import Button from '../components/Button';
-import { Form, Field, Formik } from 'formik';
+import { Form as form, Field, Formik, Form } from 'formik';
 import FieldGroup from '../components/FieldGroup';
 import strings from '../../helpers/strings';
 import TextInput from '../components/TextInput';
 import Cart from '../components/Cart';
 import Link from '../components/Link';
+import { absoluteUrl } from '../../helpers/absoluteUrl';
+import { getShopItemByVarioId } from '../../helpers/getShopItemByVarioId';
 
 interface Props {}
 
@@ -50,6 +53,7 @@ function validate(values) {
   if (isNaN(values.ico)) {
     errors['ico'] = ico;
   }
+  // TODO: include CZ before the number
   if (isNaN(values.dic)) {
     errors['dic'] = dic;
   }
@@ -57,14 +61,21 @@ function validate(values) {
   // check cart items for errors
   for (const item in values.items) {
     const curr = values.items[item];
-    errors['items'] = {
-      // @ts-ignore
-      ...errors.items,
-      [item]: {
-        length: isNaN(curr.length) || curr.length < 0 ? generic : '',
-        no: isNaN(curr.no) || curr.no < 0 ? generic : '',
-      },
-    };
+    if (
+      isNaN(curr.dimensions) ||
+      curr.dimensions < 0 ||
+      isNaN(curr.no) ||
+      curr.no < 0
+    ) {
+      errors['items'] = {
+        // @ts-ignore
+        ...errors.items,
+        [item]: {
+          dimensions: generic,
+          no: generic,
+        },
+      };
+    }
   }
 
   return errors;
@@ -72,6 +83,7 @@ function validate(values) {
 
 const Demand: React.FC<Props> = () => {
   const [varioIds, setVarioIds] = React.useState([]);
+  const { shopItemsVariants } = React.useContext(DataProvider);
   const [cookies, setCookies, removeCookies] = useCookies();
 
   React.useEffect(() => {
@@ -85,6 +97,16 @@ const Demand: React.FC<Props> = () => {
     );
     // @ts-ignore
     window.updateDemandBadge();
+  };
+
+  const dummyFormData = {
+    name: 'Jan Novák',
+    company: 'Firma',
+    email: 'novak@firma.cz',
+    phone: '+420 775 337 604',
+    ico: '12367890',
+    dic: '12345890',
+    note: 'Lorem ipsum dolor sit amet',
   };
 
   return (
@@ -105,26 +127,61 @@ const Demand: React.FC<Props> = () => {
               // key={JSON.stringify(varioIds)}
               validate={validate}
               initialValues={{
-                name: '',
-                company: '',
-                email: '',
-                phone: '',
-                ico: '',
-                dic: '',
-                note: '',
+                ...dummyFormData, // name: '',
+                // company: '',
+                // email: '',
+                // phone: '',
+                // ico: '',
+                // dic: '',
+                // note: '',
                 items: varioIds.reduce((acc, curr) => {
                   return {
                     ...acc,
                     [curr]: {
-                      length: 0,
+                      dimensions: 0,
                       no: 0,
                     },
                   };
                 }, []),
               }}
-              onSubmit={() => {}}
+              onSubmit={(values, actions) => {
+                const apiUrl = absoluteUrl(`localhost:3000`);
+                axios
+                  .post(
+                    `${apiUrl}/api/send-demand`,
+                    Object.assign(
+                      {},
+                      {
+                        values: {
+                          ...values,
+                          items: Object.keys(values.items).map((varioId) => {
+                            const { unit } = getShopItemByVarioId(
+                              shopItemsVariants,
+                              varioId
+                            );
+                            return {
+                              dimensions: values.items[varioId].dimensions,
+                              no: values.items[varioId].no,
+                              varioId: varioId,
+                              unit: unit,
+                            };
+                          }),
+                        },
+                      }
+                    )
+                  )
+                  .then((res) => {
+                    if (res.status === 200) {
+                      actions.resetForm();
+                      removeCookies('parsCart');
+                      // @ts-ignore
+                      window.updateDemandBadge();
+                      window.scrollTo(0, 0);
+                    }
+                  });
+              }}
             >
-              {({ values, errors }) => (
+              {() => (
                 <Form className={`form`}>
                   {/* <h2>Produkty</h2> */}
                   <Cart varioIds={varioIds} removeItem={removeItem} />
@@ -169,8 +226,6 @@ const Demand: React.FC<Props> = () => {
                   <Button type={`submit`} className={`btn--primary`}>
                     Odeslat
                   </Button>
-
-                  {/* <pre>{JSON.stringify({ values, errors }, null, 2)}</pre> */}
                 </Form>
               )}
             </Formik>

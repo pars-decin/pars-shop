@@ -26,31 +26,49 @@ const Sidebar: React.FC<Props> = ({ scrollToRef }) => {
     !tabletPortaitAndLarger && toggleSidebar(false);
   }, [location]);
 
-  const contents = [
-    <div
-      className={`sidebar__toggler ${showSidebar ? `show` : ``}`}
-      onClick={() => {
-        toggleSidebar((prevState) => !prevState);
-      }}
-    >
-      <Img src={`/icons/categories.svg`} />
-      <h3>Kategorie</h3>
-    </div>,
-    <SidebarSearch />,
-    <AnimatePresence initial={false}>
-      {(showSidebar || tabletPortaitAndLarger) &&
-        categoriesTree.map(({ id, name, list }) => (
-          <SidebarBlock
-            key={id}
-            id={id}
-            name={name}
-            list={list}
-            level={1}
-            scrollToRef={scrollToRef}
-          />
-        ))}
-    </AnimatePresence>,
-  ];
+  const contents = (
+    <>
+      <div
+        className={`sidebar__toggler ${showSidebar ? `show` : ``}`}
+        onClick={() => {
+          toggleSidebar((prevState) => !prevState);
+        }}
+      >
+        <Img src={`/icons/categories.svg`} />
+        <h3>Kategorie</h3>
+      </div>
+      <SidebarSearch />
+      <AnimatePresence initial={false}>
+        {(showSidebar || tabletPortaitAndLarger) && (
+          <div className={`sidebar__content-wrapper`}>
+            <span className={`sidebar__section-header`}>Podle profesí</span>
+            {/* TODO: check the responsivity for small tablet */}
+            {categoriesTree.categoriesByProffesion.map(({ id, name, list }) => (
+              <SidebarBlock
+                key={id}
+                id={id}
+                name={name}
+                list={list}
+                level={1}
+                scrollToRef={scrollToRef}
+              />
+            ))}
+            <span className={`sidebar__section-header`}>Podle materiálu</span>
+            {categoriesTree.categoriesByMaterial.map(({ id, name, list }) => (
+              <SidebarBlock
+                key={id}
+                id={id}
+                name={name}
+                list={list}
+                level={1}
+                scrollToRef={scrollToRef}
+              />
+            ))}
+          </div>
+        )}
+      </AnimatePresence>
+    </>
+  );
 
   return (
     <div className={`sidebar`}>
@@ -60,7 +78,7 @@ const Sidebar: React.FC<Props> = ({ scrollToRef }) => {
         <Scrollbar
           styles={{ maxHeight: window.innerHeight - 75, height: '100%' }}
         >
-          {...contents}
+          {contents}
         </Scrollbar>
       )}
     </div>

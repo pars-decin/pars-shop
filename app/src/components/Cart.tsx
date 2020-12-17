@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 import Link from './Link';
 import CartItem from './CartItem';
 import { DataProvider } from '../hocs/dataContext';
+import { getShopItemByVarioId } from '../../helpers/getShopItemByVarioId';
 interface Props {
   varioIds: Array<string>;
   removeItem: (x) => void;
@@ -15,8 +16,9 @@ function Cart({ varioIds, removeItem }: Props): ReactElement {
         <div className={`cart__header__item`}>Produkty</div>
       </div>
       {varioIds.map((varioId, i) => {
-        const { dimensions, shopItemId, unit } = shopItemsVariants.find(
-          (variant) => variant.varioId === varioId
+        const { dimensions, shopItemId, unit } = getShopItemByVarioId(
+          shopItemsVariants,
+          varioId
         );
         const { name } = shopItems.find(
           (shopItem) => shopItem.shopItemId === shopItemId
