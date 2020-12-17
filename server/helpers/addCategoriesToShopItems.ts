@@ -1,4 +1,4 @@
-import { Category, RawShopItem, ShopItem } from '../../app/types';
+import { Category, RawShopItem, ShopItem } from '../types';
 import mergeHashedLevels from './mergeHashedLevels';
 
 export default function addCategoriesToShopItems(

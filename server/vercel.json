@@ -1,11 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "dist/server/server.js",
-      "use": "@now/node"
-    }
-  ],
   "env": {
     "API_KEY": "@pars-api-key",
     "AUTH_DOMAIN": "@pars-auth-domain",
@@ -13,12 +6,17 @@
     "PROJECT_ID": "@pars-project-id",
     "STORAGE_BUCKET": "@pars-storage-bucket",
     "MESSAGING_SENDER_ID": "@pars-messaging-sender-id",
-    "APP_ID": "@pars-app-id"
+    "APP_ID": "@pars-app-id",
+    "SG_API_KEY": "@pars-sg-api-key"
   },
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "dist/server/server.js"
+      "src": "/api/send-demand",
+      "dest": "/api/sender.ts"
+    },
+    {
+      "src": "/api/data",
+      "dest": "api/data.ts"
     }
   ]
 }

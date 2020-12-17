@@ -1,1 +1,0 @@
-function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Chtml\u003E\u003Chead\u003E\u003Ctitle\u003Esome title\u003C\u002Ftitle\u003E\u003C\u002Fhead\u003E\u003Cbody\u003E\u003Ch1\u003Ehello bitch  \u003C\u002Fh1\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";;return pug_html;}

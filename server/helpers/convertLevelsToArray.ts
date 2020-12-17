@@ -1,4 +1,4 @@
-import { RawCategory, Category } from '../../app/types';
+import { RawCategory, Category } from '../types';
 
 export default function convertLevelsToArray(
   rawCategories: Array<RawCategory>

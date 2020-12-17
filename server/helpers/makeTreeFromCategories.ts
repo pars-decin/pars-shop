@@ -1,6 +1,6 @@
 import shortHash from 'short-hash';
 import mergeHashedLevels from './mergeHashedLevels';
-import { Category, CategoriesTree } from '../../app/types';
+import { Category, CategoriesTree } from '../types';
 
 export default function makeTreeFromCategories(
   categoriesWithLevelsInArray: Array<Category>,
@@ -54,6 +54,5 @@ export default function makeTreeFromCategories(
     makeTree({ ...categoryWithLevelsInArray, levels: slicedLevels }, 0, ``);
   }
 
-  // console.log(tree);
   return tree;
 }

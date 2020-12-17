@@ -53,6 +53,7 @@ function validate(values) {
   if (isNaN(values.ico)) {
     errors['ico'] = ico;
   }
+  // TODO: include CZ before the number
   if (isNaN(values.dic)) {
     errors['dic'] = dic;
   }
